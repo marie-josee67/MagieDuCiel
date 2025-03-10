@@ -17,7 +17,7 @@
 					<div class="row hero-height align-items-center">
 						<div class="col-12">
 							<div class="hero-about hero-about-dark text-center">
-								<h1 class="hero-name">Md Sumon Mia</h1>
+								<h1 class="hero-name"><?php the_title(); ?></h1>
 								<h2 class="qualities cd-headline clip">
 									<span>Proffesional</span> 
 									<span class="cd-words-wrapper">
@@ -61,8 +61,8 @@
 					<div class="col-lg-6 col-md-7">
 						<div class="about-content about-content-dark">
 							<div class="section-heading section-heading-white section-heading-dark-about">
-								<h2 class="section-title">About Me</h2>
-								<h3 class="section-subtitle">About Md Sumon Mia</h3>
+								<h2 class="section-title"><?php the_title(); ?></h2>
+								<h3 class="section-subtitle"><?php the_title(); ?></h3>
 							</div>
 							<p class="about-text">Hello, This is <b>Md Sumon Mia</b> a Proffesional Web Developer. I have been working more than 5 years as a Web Developer. I love to code for me and clients. I always deliver the projects before the deadline.I am expert in Front End Development, I do quality code in tricky way.</p>
 							<div class="social-links">

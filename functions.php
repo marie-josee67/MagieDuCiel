@@ -4,6 +4,9 @@
 function ciel_scripts() : void{
 
     //paramètres; identifiant, chemin, dépendance, version, in-footer
+    wp_enqueue_script( 'js_jquery-3.5.1.min',get_template_directory_uri(). '/assets/js/jquery-3.5.1.min.js',  array(),  false, true );
+    wp_enqueue_script( 'js_popper.min',get_template_directory_uri(). '/assets/js/popper.min.js',  array(),  false, true );
+    wp_enqueue_script( 'js_bootstrap.mi', get_template_directory_uri().'/assets/js/bootstrap.min.js',  array(),  false, true );
     wp_enqueue_script( 'js_modernizr',get_template_directory_uri(). '/assets/js/modernizr.js',  array(),  false, true );
     wp_enqueue_script( 'js_isotope.pkgd.min', get_template_directory_uri().'/assets/js/isotope.pkgd.min.js',  array(),  false, true );
     wp_enqueue_script( 'js_imagesloaded.pkgd.min', get_template_directory_uri().'/assets/js/imagesloaded.pkgd.min.js',  array(),  false, true ); 
@@ -19,7 +22,6 @@ function ciel_scripts() : void{
     wp_enqueue_script( 'js_jquery.pointlight', get_template_directory_uri().'/assets/js/jquery.pointlight.js',  array(),  false, true ); 
     wp_enqueue_script( 'js_main', get_template_directory_uri().'/assets/js/main.js',  array(),  false, true );
 }
-
 add_action('wp_enqueue_scripts','ciel_scripts');
 
 // chargement des fichiers css
@@ -33,10 +35,15 @@ function ciel_styles() : void{
     wp_enqueue_style( 'css_starAnimation', get_template_directory_uri().'/assets/css/starAnimation.css',  array(), null);
     wp_enqueue_style( 'css_slick', get_template_directory_uri().'/assets/css/slick.css',  array(), null );
     wp_enqueue_style( 'css_theme-default', get_template_directory_uri().'/assets/css/theme-default.css',  array(), null);
-    wp_enqueue_style( 'css_theme-default', get_template_directory_uri().'/assets/css/style.css',  array(), null);
+    wp_enqueue_style( 'css_style', get_template_directory_uri().'/assets/css/style.css',  array(), null);
 }
-
 add_action('wp_enqueue_scripts','ciel_styles');
 
 // mettre une image de mise en avant pour dynamiser les vues
 add_theme_support( 'post-thumbnails' );
+
+// création des deux menu
+// register_nav_menus( array(
+//     'Header' => 'En-tête',
+//     'Footer' => 'Pied de page',
+// ))

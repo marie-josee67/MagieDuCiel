@@ -1,8 +1,4 @@
 <?php
-    /*
-        Template Name: About-us
-        Description: page d'about
-    */
     get_header();
 ?>
 

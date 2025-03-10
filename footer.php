@@ -91,28 +91,6 @@
 		<i class="icofont-simple-up"></i>
 	</button>
 </div>
-
-<!-- All js file -->
-	<script src="assets/js/jquery-3.5.1.min.js"></script>
-	<!-- Bootstrap js -->
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<!-- js for plugin install -->
-	<script src="assets/js/modernizr.js"></script>
-	<script src="assets/js/isotope.pkgd.min.js"></script>
-	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/js/jquery.waypoints.min.js"></script>
-	<script src="assets/js/animated-counter.js"></script>
-	<script src="assets/js/jquery.meanmenu.min.js"></script>
-	<script src="assets/js/parallax.min.js"></script>
-	<script src="assets/js/animated-headline.js"></script>
-	<script src="assets/js/one-page-nav.js"></script>
-	<script src="assets/js/slick.min.js"></script>
-	<script src="assets/js/particles.min.js"></script>
-	<script src="assets/js/tilt.jquery.min.js"></script>
-	<script src="assets/js/jquery.pointlight.js"></script>
-	<script src="assets/js/main.js"></script>
-
     <!-- appel la function footer -->
    <?php wp_footer(); ?>
 </body>

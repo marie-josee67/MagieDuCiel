@@ -1,7 +1,7 @@
 <?php
     /*
         Template Name: Contact
-        Description: page de contact
+        Description: page de contact par default
     */
     get_header();
 ?>

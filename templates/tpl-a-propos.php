@@ -11,13 +11,13 @@
 	<div class="breadcrumbs-area breadcrumbs-area-innerpage" data-overlay="3" data-background="assets/img/bg/header-banner.jpg">
 		<div class="container-fluid">
 			<div class="page-title-area">
-				<h2 class="page-title pt-70">Blog</h2>
+				<h2 class="page-title pt-70"><?php the_title(); ?></h2>
 			</div>
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
 					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
 					<li><a href="#">Pages</a></li>
-					<li class="active"><a href="#">Blog</a></li>
+					<li class="active"><a href="#"><?php the_title(); ?></a></li>
 				</ul>
 			</div>
 		</div>
@@ -58,8 +58,8 @@
 					<div class="col-md-12">
 						<div class="about-content">
 							<div class="section-heading section-heading-about">
-								<h2 class="section-title">A propos</h2>
-								<h3 class="section-subtitle">Site collaboiratif</h3>
+								<h2 class="section-title"><?php the_title(); ?></h2>
+								<h3 class="section-subtitle">Site collaboratif</h3>
 							</div>
 							<p class="about-text">Passionner du ciel si vous êtes au courant d'un informations qui n'est pas encore resencer dit le nous!</p>
 							<div class="social-links">

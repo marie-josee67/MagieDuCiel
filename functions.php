@@ -47,3 +47,6 @@
     }
 
     add_action('wp_enqueue_scripts','ciel_styles');
+
+    //activer la fonctionnalitée de l'image de mise en avant 
+    add_theme_support('post-thumbnails');

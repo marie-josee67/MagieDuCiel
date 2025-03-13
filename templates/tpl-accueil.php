@@ -10,7 +10,7 @@
 <!--=========| / Main Content |=========-->
 <main>
 	<!--=========|  Home Section |=========-->
-	<section class="home" id="home" data-background="assets/img/Photos/Univers/ceinture_asteroide.png">
+	<section class="home" id="home" data-background="<?php the_post_thumbnail_url();?>">
 		<!-- Hero Section -->
 		<div class="home-area">
 			<div class="container">
@@ -19,15 +19,15 @@
 						<div class="col-12">
 							<div class="hero-about hero-about-dark text-center">
 								<h1 class="hero-name">Magie du ciel</h1>
-								<h2 class="qualities cd-headline clip">
-									<span>Continuer</span> 
-									<span class="cd-words-wrapper">
-										<b class="is-visible">de&nbsp;rêver</b>
-										<b>d'&nbsp;imaginer</b>
-										<b>de&nbsp;ressentir</b>
-										<b>de&nbsp;partager</b>
-										<b>de lever&nbsp;les yeux</b>
-									</span>
+								<h2 class="qualities cd-headline clip" >
+										<span>Continuer</span> 
+										<span class="cd-words-wrapper">
+											<b class="is-visible">de&nbsp;rêver</b>
+											<b>d'&nbsp;imaginer</b>
+											<b>de&nbsp;ressentir</b>
+											<b>de&nbsp;partager</b>
+											<b>de lever&nbsp;les yeux</b>
+										</span>
 								</h2>
 								<div class="hero-social">
 									<ul class="social-list">
@@ -36,9 +36,6 @@
 										<li><a target="_blank" href="#" class="icofont-behance"></a></li>
 										<li><a target="_blank" href="#" class="icofont-dribble"></a></li>
 									</ul>
-								</div>
-								<div class="hero-btn mt-60">
-									<a href="#about" class="dark-btn">Découvrir<span></span></a>
 								</div>
 							</div>
 						</div>

@@ -8,7 +8,7 @@
     get_header();
 ?>
 	<!--  Breadcrumbs area start fil d'arianne-->
-	<div class="breadcrumbs-area breadcrumbs-area-innerpage" data-overlay="3" data-background="assets/img/bg/header-banner.jpg">
+	<div class="breadcrumbs-area breadcrumbs-area-innerpage" data-overlay="3" data-background="<?php the_post_thumbnail_url();?>">
 		<div class="container-fluid">
 			<div class="page-title-area">
 				<h2 class="page-title pt-70"><?php the_title(); ?></h2>
@@ -16,7 +16,6 @@
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
 					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
-					<li><a href="#">Pages</a></li>
 					<li class="active"><a href="#"><?php the_title(); ?></a></li>
 				</ul>
 			</div>

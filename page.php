@@ -37,10 +37,11 @@
 				<div class="row">
                     <?php
                         if (have_posts()) : while (have_posts()) : the_post();
-                        the_permalink(); // permet de récupérer l'URL de la page en cours
-                        the_author ();
-                        the_time('d/m/y');
+                        // the_permalink(); // permet de récupérer l'URL de la page en cours
+                        // the_author ();
+                        // the_time('d/m/y'); // date de création du contenu
                         the_content(); // permet de récupérer et d'afficher le contenu de wordpress
+						// echo antispambot('monadressmail@wahou.fr'); //adresse email convertient en caractère html pour qu'un robot ne peut pas l'exploiter.
                         endwhile;
                         endif;
                     ?>

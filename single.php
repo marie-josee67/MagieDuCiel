@@ -32,27 +32,30 @@
 		<div class="container">
 			<div class="blog-single-wrapper">
 				<div class="row">
-					<!-- Blog post area -->
-					<div class="col-lg-8">
+                    <!-- Blog post area -->
+                    <div class="col-lg-8">
+                        <?php 
+                            if (have_posts()) : while (have_posts()) : the_post();
+                        ?> 
 						<!-- Blog Single Details -->
 						<div class="blog-single-post service-details-area project-details-area m-mb-30">
 							<div class="project-thumb-area">
 								<div class="project-meta service-meta">
 									<h6 class="service-meta-title"><?php the_title(); ?></h6>
-
                                     <!-- rajout personnel -->
                                     <div><?php the_category(); ?></div> 
 								</div>
 							</div>
 							<div class="content mtn-40">
-                            <?php
-                                if (have_posts()) : while (have_posts()) : the_post();
-                                the_content(); // permet de récupérer et d'afficher le contenu de wordpress
-                                endwhile;
-                                endif;
+                            <?php 
+                                the_content(); // permet de récupérer et d'afficher le contenu de wordpress 
                             ?>
 							</div>
 						</div>
+                        <?php 
+                            endwhile;
+                            endif;
+                        ?>
 					</div>
 					<!-- / Blog post area end -->
 
@@ -69,17 +72,26 @@
 							<!-- Single Widget -->
 							<div class="blog-widget-item mb-30">
 								<div class="widget-title-area">
-									<h3 class="widget-title">Categories</h3>
+									<h3 class="widget-title">Catégories</h3>
 								</div>
 								<div class="widget-content" id="category-widget">
+                                    <!-- <?php
+                                    //     wp_list_categories( array (
+                                    //         'orderby' => 'name',// par ordre alpha
+                                    //         'show_count' => '1',// compte le nom d'aticle
+                                    //         'title_li' => ''// retire le titre par default
+                                    //     )); 
+                                    ?>  -->
+                                    <?php
+                                        $categories = get_categories();
+                                    ?>
 									<ul class="category-list">
-										<li><a href="#">Étoiles<span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Constellation <span class="category-count ml-auto">(02)</span></a></li>
-										<li><a href="#">Univers <span class="category-count ml-auto">(10)</span></a></li>
-										<li><a href="#">Foudre <span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Nuage <span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Arc-en-ciel <span class="category-count ml-auto">(12)</span></a></li>
-									</ul>
+                                        <?php foreach ($categories as $categories){ ?>
+                                            <li>
+                                                <a href="#"><?php echo $categories->name; ?> <span class="category-count ml-auto">(<?php echo $categories->count; ?>)</span></a>
+                                            </li>
+                                        <?php } ?>
+									</ul> 
 								</div>
 							</div>
 						</div>

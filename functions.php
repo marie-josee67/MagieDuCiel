@@ -60,7 +60,7 @@ function custom_cathegories() {
 		'menu_name'             => _x( 'Mes cathégories', 'Admin Menu text', 'textdomain' ),
 		'name_admin_bar'        => _x( 'Cathégorie', 'Ajouter nouveau on Toolbar', 'textdomain' ),
 		'add_nw'               => __( 'Ajouter nouveau', 'textdomain' ),
-		'add_new_item'          => __( 'Ajouter nouvellc Cathégorie', 'textdomain' ),
+		'add_new_item'          => __( 'Ajouter nouvelle Cathégorie', 'textdomain' ),
 		'new_item'              => __( 'nouveau Cathégorie', 'textdomain' ),
 		'edit_item'             => __( 'Edit Cathégorie', 'textdomain' ),
 		'view_item'             => __( 'View Cathégorie', 'textdomain' ),
@@ -93,6 +93,8 @@ function custom_cathegories() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+        'menu_icon'          => 'dashicons-category', // pour choisir l'icone
+        'show_in_rest'       => true, // met guthemberg
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 	);
 

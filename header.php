@@ -8,7 +8,7 @@
 <!--=========| Preloader Start |=========-->
 <div id="ftco-loader" class="show fullscreen pre-loader">
 	<div class="loader-position">
-		<img src="assets/img/preloader.gif" alt="Preloader">
+		<img src="/assets/img/preloader.gif" alt="Preloader">
 	</div>
 </div>
 <!--=========| Preloader End   |=========-->
@@ -20,8 +20,8 @@
 			<div class="navigation-area">
 				<div class="logo">
 					<a href="#" class="navbar-brand">
-						<img class="logo-dark" src="assets/img/logo/logo_dark.png" alt="Abias logo">
-						<img class="logo-white" src="assets/img/logo/logo.png" alt="Abias logo">
+						<img class="logo-dark" src="/assets/img/logo/logo_dark.png" alt="Abias logo">
+						<img class="logo-white" src="/assets/img/logo/logo.png" alt="Abias logo">
 					</a>
 				</div>
 				<div class="main-menu main-menu-dark ml-auto">

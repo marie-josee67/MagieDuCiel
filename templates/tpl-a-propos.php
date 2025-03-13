@@ -78,7 +78,7 @@
 		<!--=========|  Stats Section |=========-->
 		<div class="stats stats-about" id="counters_one">
 			<div class="container">
-				<div class="stats-wrapper" data-background="assets/img/bg/stats_bg.png">
+				<div class="stats-wrapper" data-background="/assets/img/bg/stats_bg.png">
 					<div class="row">
 						<div class="col-3">
 							<div class="stats-item">
@@ -104,7 +104,7 @@
 									<i class="icofont-man-in-glasses"></i>
 								</div>
 								<h3 class="counter stats-count" data-TargetNum="02" data-Speed="4000">0</h3>
-								<span class="stats-name">Years Experience</span>
+								<span class="stats-name">Années d'expérience</span>
 							</div>
 						</div>
 						<div class="col-3">
@@ -140,8 +140,8 @@
 								<i class="icofont-layers"></i>
 							</div>
 							<h4 class="service-title">Décend du ciel</h4>
-							<p class="service-description">Lorem ipsum dolor sit eliti sed eiusm aliquam quaeratamrsonar banglay valobasi voluptatem.</p>
-							<a href="#" class="service-btn">Read More</a>
+							<p class="service-description">Se qui va du ciel vers le sol de notre planète</p>
+							<a href="#" class="service-btn">Voir plus</a>
 						</div>
 					</div>
 					<!-- Service Single -->
@@ -151,8 +151,8 @@
 								<i class="icofont-interface"></i>
 							</div>
 							<h4 class="service-title">Ciel</h4>
-							<p class="service-description">Lorem ipsum dolor sit eliti sed eiusm aliquam quaeratamrsonar banglay valobasi voluptatem.</p>
-							<a href="#" class="service-btn">Read More</a>
+							<p class="service-description">Ce qui se passe au niveau du ciel.</p>
+							<a href="#" class="service-btn">Voir plus</a>
 						</div>
 					</div>
 					<!-- Service Single -->
@@ -162,8 +162,8 @@
 								<i class="icofont-code"></i>
 							</div>
 							<h4 class="service-title">Au dessus du ciel</h4>
-							<p class="service-description">Lorem ipsum dolor sit eliti sed eiusm aliquam quaeratamrsonar banglay valobasi voluptatem.</p>
-							<a href="#" class="service-btn">Read More</a>
+							<p class="service-description">Ce qui se passe hors du ciel de notre planète dans l'espace.</p>
+							<a href="#" class="service-btn">Voir plus</a>
 						</div>
 					</div>
 				</div>
@@ -172,102 +172,6 @@
 	</section>
 	<!--=========| / Service Section |=========-->
 	
-	<!--=========|  Team Section |=========-->
-	<section class="team pt-60 pb-100" id="team">
-		<div class="container">
-			<div class="portfolio-wrapper">
-				<div class="section-heading">
-					<h2 class="section-title">Team</h2>
-					<h3 class="section-subtitle">This Project Done by Us</h3>
-				</div>
-				<div class="mb-20 overflow-hidden"></div>
-				<div class="team-area">
-					<div class="row justify-content-center">
-						<!-- Single Team Member -->
-						<div class="col-lg-4 col-md-6">
-							<div class="team-item-area">
-								<div class="team-pb-90"></div>
-								<div class="team-img">
-									<img src="assets/img/people/team_1.jpg" alt="member">
-								</div>
-								<div class="team-item">
-									<div class="team-circle"></div>
-									<div class="team-content">
-										<h5 class="team-name">Alex Joss</h5>
-										<h6 class="team-designation mb-20">Web Developer</h6>
-										<p class="team-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-										<div class="team-social mb-30">
-											<ul class="social-list">
-												<li><a href="#" target="_blank" class="fab fa-facebook-f"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-twitter"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-skype"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-linkedin-in"></a></li>
-											</ul>
-										</div>
-										<a href="#" class="simple-btn">View More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Single Team Member -->
-						<div class="col-lg-4 col-md-6">
-							<div class="team-item-area">
-								<div class="team-pb-90"></div>
-								<div class="team-img">
-									<img src="assets/img/people/team_2.jpg" alt="member">
-								</div>
-								<div class="team-item">
-									<div class="team-circle"></div>
-									<div class="team-content">
-										<h5 class="team-name">Fred Rossy</h5>
-										<h6 class="team-designation mb-20">UI/UX Designer</h6>
-										<p class="team-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-										<div class="team-social mb-30">
-											<ul class="social-list">
-												<li><a href="#" target="_blank" class="fab fa-facebook-f"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-twitter"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-skype"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-linkedin-in"></a></li>
-											</ul>
-										</div>
-										<a href="#" class="simple-btn">View More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Single Team Member -->
-						<div class="col-lg-4 col-md-6">
-							<div class="team-item-area">
-								<div class="team-pb-90"></div>
-								<div class="team-img">
-									<img src="assets/img/people/team_3.jpg" alt="member">
-								</div>
-								<div class="team-item">
-									<div class="team-circle"></div>
-									<div class="team-content">
-										<h5 class="team-name">Goerge</h5>
-										<h6 class="team-designation mb-20">IT Manger</h6>
-										<p class="team-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-										<div class="team-social mb-30">
-											<ul class="social-list">
-												<li><a href="#" target="_blank" class="fab fa-facebook-f"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-twitter"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-skype"></a></li>
-												<li><a href="#" target="_blank" class="fab fa-linkedin-in"></a></li>
-											</ul>
-										</div>
-										<a href="#" class="simple-btn">View More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--=========| / Team Section |=========-->
-
 </main>
 <!--=========|  Main Content |=========-->
 

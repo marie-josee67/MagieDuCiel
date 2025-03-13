@@ -55,7 +55,7 @@
 				<div class="row">
 					<div class="col-lg-6 col-md-5">
 						<div class="about-img about-img-dark">
-							<img src="assets/img/Photos/auroreboreale/glacier.jpg" alt="About img">
+							<img src="assets/img/people/dark_about_man.jpg" alt="About img">
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-7">
@@ -77,7 +77,7 @@
 	<!--=========| / About Section |=========-->
 
 	<!--=========|  Experience Section |=========-->
-	<section class="experience pt-60 pb-100" id="experience" data-background="assets/img/Photos/auroreboreale/village.jpg" data-overlay="9">
+	<section class="experience pt-60 pb-100" id="experience" data-background="/assets/img/bg/dark_experience_bg.jpgg" data-overlay="9">
 		<div class="container">
 			<div class="experience-wrapper">
 				<div class="section-heading section-heading-white">
@@ -94,7 +94,7 @@
 									<i class="icofont-flora-flower"></i>
 								</div>
 								<div class="experience-details">
-									<h3 class="experience-title">Le nombre d'etoiles</h3>
+									<h3 class="experience-title">Le nombre d'étoiles</h3>
 									<p class="experience-desc"> 5 000 étoiles sont visibles depuis la Terre. Mais tous dépend bien sur de différent facteurs: condition d'observation, de la période de l'année, de la pollution lumineuse ...</p>
 								</div>
 							</div>
@@ -146,7 +146,7 @@
 	<!--=========| / Experience Section |=========-->
 
 	<!--=========|  Service Section |=========-->
-	<section class="service service-dark pt-60 pb-20" id="service" data-background="assets/img/bg/dark_service_bg.jpg" data-overlay="9">
+	<section class="service service-dark pt-60 pb-20" id="service" data-background="/assets/img/bg/dark_service_bg.jpg" data-overlay="9">
 		<div class="container">
 			<div class="service-wrapper">
 				<div class="section-heading section-heading-white">
@@ -242,16 +242,16 @@
 			</div>
 		</div>
 		<div class="skill-dots skill-dots-left">
-			<img src="assets/img/shapes/skill_dots_left.png" alt="">
+			<img src="/assets/img/shapes/skill_dots_left.png" alt="">
 		</div>
 		<div class="skill-dots skill-dots-right">
-			<img src="assets/img/shapes/skill_dots_left.png" alt="">
+			<img src="/assets/img/shapes/skill_dots_left.png" alt="">
 		</div>
 	</section>
 	<!--=========| / Skill Section |=========-->
 
 	<!--=========|  Feedback Section |=========-->
-	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="assets/img/bg/feedback_bg.jpg" data-overlay="9">
+	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="/assets/img/bg/feedback_bg.jpg" data-overlay="9">
 		<div class="container">
 			<div class="feedback-wrapper">
 				<div class="section-heading section-heading-white">
@@ -264,7 +264,7 @@
 							<!-- Feedback Single -->
 							<div class="feedback-item">
 								<div class="feedback-thumb">
-									<img src="assets/img/Photos/Planetes/pexels-kalpseh-panel-13333170-3542314.jpg" alt="client">
+									<img src="/assets/img/people/client_4.png" alt="client">
 								</div>
 								<div class="feedback-client-profile">
 									<h5 class="client-name">John Hafty</h5>
@@ -275,7 +275,7 @@
 							<!-- Feedback Single -->
 							<div class="feedback-item">
 								<div class="feedback-thumb">
-									<img src="assets/img/Photos/Univers/nasa--hl5dX2ObAs-unsplash.jpg" alt="client">
+									<img src="/assets/img/people/client_3.png" alt="client">
 								</div>
 								<div class="feedback-client-profile">
 									<h5 class="client-name">AstroUnivers</h5>
@@ -328,7 +328,7 @@
 	<!--=========| / Fun Fact Section |=========-->
 
 	<!--=========|  Blog Section |=========-->
-	<section class="blog blog-dark pt-60 pb-100" id="blog" data-background="assets/img/bg/dark_blog_bg.jpg" data-overlay="8">
+	<section class="blog blog-dark pt-60 pb-100" id="blog" data-background="/assets/img/bg/dark_blog_bg.jpg" data-overlay="8">
 		<div class="container">
 			<div class="blog-wrapper">
 				<div class="section-heading section-heading-white">
@@ -341,7 +341,7 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="blog-item-dark">
 								<a href="single.html" class="blog-thumb">
-									<img src="assets/img/Photos/Planetes/Photos/Systeme_solaire_2.png" alt="blog image">
+									<img src="/assets/img/blog/dark_blog_1.jpg" alt="blog image">
 								</a>
 								<div class="blog-content-area">
 									<div class="blog-contents">
@@ -361,7 +361,7 @@
 									<div class="blog-meta d-flex">
 										<div class="blog-author">
 											<a href="#" class="author-avator">
-												<img src="assets/img/people/author.png" alt="auhtor">
+												<img src="/assets/img/people/author.png" alt="auhtor">
 											</a>
 											<a href="#" class="author-name">Mr ExpertEspace</a>
 										</div>
@@ -374,7 +374,7 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="blog-item-dark">
 								<a href="single.html" class="blog-thumb">
-									<img src="assets/img/blog/dark_blog_2.jpg" alt="blog image">
+									<img src="/assets/img/blog/dark_blog_2.jpg" alt="blog image">
 								</a>
 								<div class="blog-content-area">
 									<div class="blog-contents">
@@ -392,7 +392,7 @@
 									<div class="blog-meta d-flex">
 										<div class="blog-author">
 											<a href="#" class="author-avator">
-												<img src="assets/img/people/author.png" alt="auhtor">
+												<img src="/assets/img/people/author.png" alt="auhtor">
 											</a>
 											<a href="#" class="author-name">Mlle PetiteOurse</a>
 										</div>
@@ -405,7 +405,7 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="blog-item-dark">
 								<a href="single.html" class="blog-thumb">
-									<img src="assets/img/blog/dark_blog_3.jpg" alt="blog image">
+									<img src="/assets/img/blog/dark_blog_3.jpg" alt="blog image">
 								</a>
 								<div class="blog-content-area">
 									<div class="blog-contents">
@@ -423,7 +423,7 @@
 									<div class="blog-meta d-flex">
 										<div class="blog-author">
 											<a href="#" class="author-avator">
-												<img src="assets/img/people/author.png" alt="auhtor">
+												<img src="/assets/img/people/author.png" alt="auhtor">
 											</a>
 											<a href="#" class="author-name">Mme Foudreuse</a>
 										</div>

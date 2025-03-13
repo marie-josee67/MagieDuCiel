@@ -27,7 +27,7 @@
 				<div class="main-menu main-menu-dark ml-auto">
 					<nav class="menu" id="mobile-menu">
 						<ul class="menu-list" id="nav">
-							<li class="active"><a href="home_dark.html">Accueil</a>
+							<li class="active"><a href="<?php echo home_url(); ?>">Accueil</a>
 							</li>
 							<li><a href="about-us.html">A propos</a>
 							</li>

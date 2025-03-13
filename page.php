@@ -15,7 +15,7 @@
 			</div>
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
-					<li><a href="#">Accueil</a></li>
+					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
 					<li><a href="#">Pages</a></li>
 					<li class="active"><a href="#">Blog</a></li>
 				</ul>
@@ -38,7 +38,7 @@
 				<div class="row">
                     <?php
                         if (have_posts()) : while (have_posts()) : the_post();
-                        the_content(); // permet de faire l'affichage
+                        the_content(); // permet de récupérer et d'afficher le contenu de wordpress
                         endwhile;
                         endif;
                     ?>

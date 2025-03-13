@@ -15,7 +15,7 @@
 			</div>
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
-					<li><a href="#">Accueil</a></li>
+					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
 					<li><a href="#">Pages</a></li>
 					<li class="active"><a href="#">Blog</a></li>
 				</ul>

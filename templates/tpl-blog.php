@@ -5,8 +5,29 @@
 	*/
 
 	// code qui permet d'afficher le header
-	get_header('page');
+	get_header();
 ?>
+	<!--  Breadcrumbs area start -->
+	<div class="breadcrumbs-area breadcrumbs-area-innerpage" data-overlay="3" data-background="assets/img/bg/header-banner.jpg">
+		<div class="container-fluid">
+			<div class="page-title-area">
+				<h2 class="page-title pt-70">Blog</h2>
+			</div>
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list">
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Pages</a></li>
+					<li class="active"><a href="#">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+	</div>
+	<!--  Breadcrumbs area end -->
+</header>
+<!--=========| / Header Section |=========-->
 <!--=========| / Main Content |=========-->
 <main>
 

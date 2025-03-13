@@ -50,18 +50,21 @@
 						?>
 
 						<div class="blog-item mb-30">
-							<a href="single.html" class="blog-thumb">
-								<img src="assets/img/blog/blog_1.jpg" alt="blog image">
+							<a href="<?php the_permalink(); ?>" class="blog-thumb">
+								<img src="<?php the_post_thumbnail_url(); ?>" alt="blog image">
 							</a>
 							<div class="blog-content">
 								<div class="author-time">
-									<span class="author">by <a href="#">Kamla Babu</a></span>
-									<a href="#" class="time">April 01, 2021</a>
+									<span><?php the_category(); ?></span> <!-- rajout personnel -->
+									<span class="author">Par : <?php the_author(); ?></span>
+									<span class="time"> Le : <?php the_time('d/m/Y'); ?></span>
 								</div>
-								<a href="single.html" class="blog-title">How to grow up your Business ?</a>
-								<p class="blog-desc">Nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.</p>
+								<span class="blog-title"><?php the_title(); ?></span>
+								
+								<!-- mais un extrait de l'article -->
+								<?php  the_excerpt()?>
 							</div>
-							<a href="single.html" class="blog-btn gr-transition">See Details</a>
+							<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition">Lire plus</a>
 						</div>
 					</div>
 					<?php 
@@ -77,8 +80,52 @@
 					<?php 
 						} 
 					?>
+
+					<div class="mb-50"></div>
+						<div class="pagination">
+							<ul class="pagination-list">
+								<li><a href="#"><i class="icofont-simple-left"></i></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#"><i class="icofont-simple-right"></i></a></li>
+							</ul>
+						</div>
+						<div class="mb-50"></div>
+					</div>
+					<!-- / Blog post area end -->
+
+					<!-- Blog Widget Area Start -->
+					<div class="col-lg-4">
+						<div class="blog-widgets-area">
+							<!-- Single Widget -->
+							<div class="blog-widget-item mb-30">
+								<div class="widget-title-area">
+									<h3 class="widget-title">Categories</h3>
+								</div>
+								<div class="widget-content" id="category-widget">
+									<ul class="category-list">
+										<li><a href="#">Étoiles<span class="category-count ml-auto">(12)</span></a></li>
+										<li><a href="#">Constellation <span class="category-count ml-auto">(02)</span></a></li>
+										<li><a href="#">Foudre <span class="category-count ml-auto">(10)</span></a></li>
+										<li><a href="#">Planètes <span class="category-count ml-auto">(12)</span></a></li>
+										<li><a href="#">Arc-en-ciel <span class="category-count ml-auto">(12)</span></a></li>
+										<li><a href="#">Nuages <span class="category-count ml-auto">(12)</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / Blog Widget Area End -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=========| / Blog Section |=========-->
 </main>
 <!--=========|  Main Content |=========-->
+
 
 <!-- code qui permet d'afficher le footer sur toutes les pages -->
 <?php

@@ -37,6 +37,9 @@
 				<div class="row">
                     <?php
                         if (have_posts()) : while (have_posts()) : the_post();
+                        the_permalink(); // permet de récupérer l'URL de la page en cours
+                        the_author ();
+                        the_time('d/m/y');
                         the_content(); // permet de récupérer et d'afficher le contenu de wordpress
                         endwhile;
                         endif;

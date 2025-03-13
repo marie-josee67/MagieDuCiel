@@ -21,7 +21,6 @@
 				<div class="logo">
 					<a href="#" class="navbar-brand">
 						<img class="logo-dark" src="/assets/img/logo/logo_dark.png" alt="Abias logo">
-						<img class="logo-white" src="/assets/img/logo/logo.png" alt="Abias logo">
 					</a>
 				</div>
 				<div class="main-menu main-menu-dark ml-auto">
@@ -29,19 +28,14 @@
 						<ul class="menu-list" id="nav">
 							<li class="active"><a href="<?php echo home_url(); ?>">Accueil</a>
 							</li>
-							<li><a href="about-us.html">A propos</a>
+							<li><a href="<?php the_permalink(14); ?>">A propos</a>
 							</li>
-							<li><a href="service_2.html">Services</a>
+							<li><a href="<?php the_permalink(16); ?>">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="single-service.html">Service Details</a></li>
+									<li><a href="single.php">Blog Details</a></li>
 								</ul>
 							</li>
-							<li><a href="#page">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="404.html">404 Page</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="<?php the_permalink(12); ?>">Contact</a></li>
 						</ul>
 					</nav>
 				</div>

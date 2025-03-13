@@ -1,4 +1,4 @@
-<<?php
+<?php
 	/*
 		Template Name: Blog
 		Description: page de blog

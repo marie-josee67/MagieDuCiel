@@ -50,3 +50,53 @@
 
     //activer la fonctionnalitée de l'image de mise en avant 
     add_theme_support('post-thumbnails');
+
+
+// création d'un nouveau post type de contenu dans wordpress pour le blog
+function custom_cathegories() {
+	$labels = array(
+		'name'                  => _x( 'Cathégories', 'Post type general name', 'textdomain' ),
+		'singular_name'         => _x( 'Cathégorie', 'Post type singular name', 'textdomain' ),
+		'menu_name'             => _x( 'Mes cathégories', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Cathégorie', 'Ajouter nouveau on Toolbar', 'textdomain' ),
+		'add_nw'               => __( 'Ajouter nouveau', 'textdomain' ),
+		'add_new_item'          => __( 'Ajouter nouvellc Cathégorie', 'textdomain' ),
+		'new_item'              => __( 'nouveau Cathégorie', 'textdomain' ),
+		'edit_item'             => __( 'Edit Cathégorie', 'textdomain' ),
+		'view_item'             => __( 'View Cathégorie', 'textdomain' ),
+		'all_items'             => __( 'Toutes les Cathégories', 'textdomain' ),
+		'search_items'          => __( 'Rechercher une cathégories', 'textdomain' ),
+		'parent_item_colon'     => __( 'Cathégories Parent:', 'textdomain' ),
+		'not_found'             => __( 'Aucune Cathégories trouver.', 'textdomain' ),
+		'not_found_in_trash'    => __( 'Aucune Cathégories trouver dans la corbeille.', 'textdomain' ),
+		'featured_image'        => _x( 'Image de mise en avant', 'Overrides the “Featured Image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
+		'set_featured_image'    => _x( 'Définir image de mise en avant', 'Overrides the “Set featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
+		'remove_featured_image' => _x( 'Supprimer image de mise en avant', 'Overrides the “Remove featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
+		'use_featured_image'    => _x( 'Utiliser comme image de mise en avant', 'Overrides the “Use as featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
+		'archives'              => _x( 'Cathégorie archives', 'The post type archive label used in nav menus. Default “Post Archives”. Ajoutered in 4.4', 'textdomain' ),
+		'insert_into_item'      => _x( 'Insert into Cathégorie', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Ajoutered in 4.4', 'textdomain' ),
+		'uploaded_to_this_item' => _x( 'Uploaded to this Cathégorie', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Ajoutered in 4.4', 'textdomain' ),
+		'filter_items_list'     => _x( 'Filter Cathégories list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Ajoutered in 4.4', 'textdomain' ),
+		'items_list_navigation' => _x( 'Cathégories list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Ajoutered in 4.4', 'textdomain' ),
+		'items_list'            => _x( 'Cathégories list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Ajoutered in 4.4', 'textdomain' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'cathegorie' ),
+        // permet que cela soit similaire au article et non au page
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+	);
+
+	register_post_type( 'cathegorie', $args );
+}
+
+add_action( 'init', 'custom_cathegories' );

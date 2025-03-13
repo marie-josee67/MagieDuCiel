@@ -29,123 +29,54 @@
 <!--=========| / Header Section |=========-->
 <!--=========| / Main Content |=========-->
 <main>
-
-	<!--=========|  Service Section |=========-->
-	<div class="service pt-60 pb-20" id="service">
+	<!--=========|  Blog Section |=========-->
+	<div class="blog-page pt-100" id="blog-page">
 		<div class="container">
-			<div class="service-wrapper">
-				<div class="section-heading">
-					<h2 class="section-title">Blog</h2>
-					<h3 class="section-subtitle">Mes Articles</h3>
-				</div>
-				<div class="service-area mt-80">
-					<div class="row">
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fas fa-laptop-code"></i>
+			<div class="blog-page-wrapper">
+				<!-- Blog post area -->
+				<div class="row blog-posts justify-content-center">
+					<!-- Blog Single-->
+					<div class="col-lg-4 col-md-6">
+
+						<?php 
+							// création d'une varaible pour stocker les données de la BDD
+							$the_query = new WP_Query(array(
+								'posts_per_page' => -1,
+								'orderby' => 'menu_order'));
+								// On teste si des données sont retournées par la requêtes SQL
+								if ($the_query->have_posts() ) {
+								// s'il y a des données, on boucle dessus
+								while($the_query->have_posts()) {$the_query->the_post();
+						?>
+
+						<div class="blog-item mb-30">
+							<a href="single.html" class="blog-thumb">
+								<img src="assets/img/blog/blog_1.jpg" alt="blog image">
+							</a>
+							<div class="blog-content">
+								<div class="author-time">
+									<span class="author">by <a href="#">Kamla Babu</a></span>
+									<a href="#" class="time">April 01, 2021</a>
 								</div>
-								<h3 class="service-title">Étoiles</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
+								<a href="single.html" class="blog-title">How to grow up your Business ?</a>
+								<p class="blog-desc">Nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.</p>
 							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fas fa-cogs"></i>
-								</div>
-								<h3 class="service-title">Contellation</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="icofont-brand-android-robot"></i>
-								</div>
-								<h3 class="service-title">L'univers</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fab fa-stack-overflow"></i>
-								</div>
-								<h3 class="service-title">Foudre</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="icofont-chart-growth"></i>
-								</div>
-								<h3 class="service-title">Nuages</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fas fa-headset"></i>
-								</div>
-								<h3 class="service-title">Arc-en-ciel</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fas fa-laptop-code"></i>
-								</div>
-								<h3 class="service-title">Great web Design</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="fas fa-cogs"></i>
-								</div>
-								<h3 class="service-title">Core Development</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark service-item-grid">
-								<div class="service-icon-dark">
-									<i class="icofont-brand-android-robot"></i>
-								</div>
-								<h3 class="service-title">Apps Development</h3>
-								<p class="service-desc">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit donec</p>
-								<a href="single-service.html" class="btn-more">Read More</a>
-							</div>
+							<a href="single.html" class="blog-btn gr-transition">See Details</a>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--=========| / Service Section |=========-->
-
+					<?php 
+						// fermeture du while
+						} 
+						wp_reset_postdata();
+						// fermeture du if
+						}
+						// si la boucle ne retourne rien afficher se texte 
+						else { 
+					?>
+					Il n'y a aucune actualité pour le moment
+					<?php 
+						} 
+					?>
 </main>
 <!--=========|  Main Content |=========-->
 

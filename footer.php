@@ -23,7 +23,7 @@
 			</div>
 			<!-- / Footer Widget area end-->
 			<div class="copyright">
-				<p>&copy; 2025 <a target="_blank" href="https://themeforest.net/user/webglib">webglib</a>. All rights reserved. </p>
+				<p>&copy; 2025 | Tous droits réserver </p>
 			</div>
 		</div>
 	</div>

@@ -75,13 +75,6 @@
 									<h3 class="widget-title">Catégories</h3>
 								</div>
 								<div class="widget-content" id="category-widget">
-                                    <!-- <?php
-                                    //     wp_list_categories( array (
-                                    //         'orderby' => 'name',// par ordre alpha
-                                    //         'show_count' => '1',// compte le nom d'aticle
-                                    //         'title_li' => ''// retire le titre par default
-                                    //     )); 
-                                    ?>  -->
                                     <?php
                                         $categories = get_categories();
                                     ?>

@@ -41,8 +41,10 @@
 						<?php 
 							// création d'une varaible pour stocker les données de la BDD
 							$the_query = new WP_Query(array(
-								'posts_per_page' => -1,
-								'orderby' => 'menu_order'));
+								'posts_per_page' => -1, // tous les articles
+								'orderby' => 'date',
+								'order' => 'DESC',
+							));
 								// On teste si des données sont retournées par la requêtes SQL
 								if ($the_query->have_posts() ) {
 								// s'il y a des données, on boucle dessus
@@ -105,13 +107,15 @@
 									<h3 class="widget-title">Categories</h3>
 								</div>
 								<div class="widget-content" id="category-widget">
+									<?php
+                                        $categories = get_categories();
+                                    ?>
 									<ul class="category-list">
-										<li><a href="#">Étoiles<span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Constellation <span class="category-count ml-auto">(02)</span></a></li>
-										<li><a href="#">Foudre <span class="category-count ml-auto">(10)</span></a></li>
-										<li><a href="#">Planètes <span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Arc-en-ciel <span class="category-count ml-auto">(12)</span></a></li>
-										<li><a href="#">Nuages <span class="category-count ml-auto">(12)</span></a></li>
+                                        <?php foreach ($categories as $categories){ ?>
+                                            <li>
+                                                <a href="#"><?php echo $categories->name; ?> <span class="category-count ml-auto">(<?php echo $categories->count; ?>)</span></a>
+                                            </li>
+                                        <?php } ?>
 									</ul>
 								</div>
 							</div>

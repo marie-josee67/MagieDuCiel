@@ -62,7 +62,8 @@
 					<!-- Blog Widget Area Start -->
 					<div class="col-lg-4">
 						<div class="blog-widgets-area">
-							<!-- Single Widget -->
+                            
+							<!-- Single Widget  barre de recherche-->
 							<div class="blog-widget-item mb-30">
 								<form role="search" method="get" class="search-form" action="#"> 
 									<input type="search" class="search-field" placeholder="Search" value="" name="s">

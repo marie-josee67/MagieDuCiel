@@ -5,7 +5,7 @@
 */
 
 // code qui permet d'afficher le header
-    get_header();
+    get_header('page');
 ?>
 <!--=========| / Main Content |=========-->
 <main>

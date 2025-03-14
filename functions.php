@@ -55,7 +55,7 @@
 // création d'un nouveau post type de contenu dans wordpress pour le blog
 function custom_articles() {
 	$labels = array(
-		'name'                  => _x( 'Articless', 'Post type general name', 'textdomain' ),
+		'name'                  => _x( 'Articles', 'Post type general name', 'textdomain' ),
 		'singular_name'         => _x( 'Article', 'Post type singular name', 'textdomain' ),
 		'menu_name'             => _x( 'Mes articles', 'Admin Menu text', 'textdomain' ),
 		'name_admin_bar'        => _x( 'Article', 'Ajouter nouveau on Toolbar', 'textdomain' ),
@@ -89,13 +89,13 @@ function custom_articles() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'article' ),
-        // permet que cela soit similaire au article et non au page
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
         'menu_icon'          => 'dashicons-category', // pour choisir l'icone
         'show_in_rest'       => true, // met guthemberg
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+        'taxonomies'         => array('category', 'post_tag'),
 	);
 
 	register_post_type( 'article', $args );

@@ -20,10 +20,10 @@
         wp_enqueue_script( 'js-jquery.pointlight', get_template_directory_uri() .'/assets/js/jquery.pointlight.js',  array(),  false, true ); 
         wp_enqueue_script( 'js-main', get_template_directory_uri() .'/assets/js/main.js',  array(),  false, true );
         // script restant qui ne sont pas dans l'index HTML de base
-        // wp_enqueue_script( 'js-fogEffect', get_template_directory_uri() .'/assets/js/fogEffect.js',  array(),  false, true );
-        // wp_enqueue_script( 'js-html5shiv',get_template_directory_uri() . '/assets/js/html5shiv.min.js',  array(),  false, true );
-        // wp_enqueue_script( 'js-respond', get_template_directory_uri() .'/assets/js/respond.min.js',  array(),  false, true ); 
-        // wp_enqueue_script( 'js-selectivizr', get_template_directory_uri() .'/assets/js/selectivizr-min.js',  array(),  false, true );
+        wp_enqueue_script( 'js-fogEffect', get_template_directory_uri() .'/assets/js/fogEffect.js',  array(),  false, true );
+        wp_enqueue_script( 'js-html5shiv',get_template_directory_uri() . '/assets/js/html5shiv.min.js',  array(),  false, true );
+        wp_enqueue_script( 'js-respond', get_template_directory_uri() .'/assets/js/respond.min.js',  array(),  false, true ); 
+        wp_enqueue_script( 'js-selectivizr', get_template_directory_uri() .'/assets/js/selectivizr-min.js',  array(),  false, true );
     }
 
     add_action('wp_enqueue_scripts','ciel_scripts');
@@ -40,10 +40,10 @@
         wp_enqueue_style( 'css-theme-default', get_template_directory_uri() .'/assets/css/theme-default.css',  array(), null);
         wp_enqueue_style( 'css-style', get_template_directory_uri() .'/assets/css/style.css',  array(), null);
         // css restant qui ne sont pas dans l'index HTML de base
-        // wp_enqueue_style( 'css-slick', get_template_directory_uri() .'/assets/css/slick.css',  array(), null );
-        // wp_enqueue_style( 'css-flaticon', get_template_directory_uri() .'/assets/css/flaticon.css',  array(), null);
-        // wp_enqueue_style( 'css-font-awesome', get_template_directory_uri() .'/assets/css/font-awesome.all.min.css',  array(), null);
-        // wp_enqueue_style( 'css-icofont', get_template_directory_uri() .'/assets/css/icofont.min.css',  array(), null );
+        wp_enqueue_style( 'css-slick', get_template_directory_uri() .'/assets/css/slick.css',  array(), null );
+        wp_enqueue_style( 'css-flaticon', get_template_directory_uri() .'/assets/css/flaticon.css',  array(), null);
+        wp_enqueue_style( 'css-font-awesome', get_template_directory_uri() .'/assets/css/font-awesome.all.min.css',  array(), null);
+        wp_enqueue_style( 'css-icofont', get_template_directory_uri() .'/assets/css/icofont.min.css',  array(), null );
     }
 
     add_action('wp_enqueue_scripts','ciel_styles');
@@ -53,32 +53,32 @@
 
 
 // création d'un nouveau post type de contenu dans wordpress pour le blog
-function custom_cathegories() {
+function custom_articles() {
 	$labels = array(
-		'name'                  => _x( 'Catégories', 'Post type general name', 'textdomain' ),
-		'singular_name'         => _x( 'Catégorie', 'Post type singular name', 'textdomain' ),
-		'menu_name'             => _x( 'Mes catégories', 'Admin Menu text', 'textdomain' ),
-		'name_admin_bar'        => _x( 'Catégorie', 'Ajouter nouveau on Toolbar', 'textdomain' ),
+		'name'                  => _x( 'Articless', 'Post type general name', 'textdomain' ),
+		'singular_name'         => _x( 'Article', 'Post type singular name', 'textdomain' ),
+		'menu_name'             => _x( 'Mes articles', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Article', 'Ajouter nouveau on Toolbar', 'textdomain' ),
 		'add_nw'               => __( 'Ajouter nouveau', 'textdomain' ),
-		'add_new_item'          => __( 'Ajouter nouvelle catégorie', 'textdomain' ),
-		'new_item'              => __( 'nouveau catégorie', 'textdomain' ),
-		'edit_item'             => __( 'Edit catégorie', 'textdomain' ),
-		'view_item'             => __( 'View catégorie', 'textdomain' ),
-		'all_items'             => __( 'Toutes les catégories', 'textdomain' ),
-		'search_items'          => __( 'Rechercher une catégories', 'textdomain' ),
-		'parent_item_colon'     => __( 'catégories Parent:', 'textdomain' ),
-		'not_found'             => __( 'Aucune catégories trouver.', 'textdomain' ),
-		'not_found_in_trash'    => __( 'Aucune catégories trouver dans la corbeille.', 'textdomain' ),
+		'add_new_item'          => __( 'Ajouter nouvelle Article', 'textdomain' ),
+		'new_item'              => __( 'nouveau Article', 'textdomain' ),
+		'edit_item'             => __( 'Éditer article', 'textdomain' ),
+		'view_item'             => __( 'Nouvel article', 'textdomain' ),
+		'all_items'             => __( 'Toutes les articles', 'textdomain' ),
+		'search_items'          => __( 'Rechercher une Articles', 'textdomain' ),
+		'parent_item_colon'     => __( 'Articles parent:', 'textdomain' ),
+		'not_found'             => __( 'Aucune articles trouver.', 'textdomain' ),
+		'not_found_in_trash'    => __( 'Aucune articles trouver dans la corbeille.', 'textdomain' ),
 		'featured_image'        => _x( 'Image de mise en avant', 'Overrides the “Featured Image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
 		'set_featured_image'    => _x( 'Définir image de mise en avant', 'Overrides the “Set featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
 		'remove_featured_image' => _x( 'Supprimer image de mise en avant', 'Overrides the “Remove featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
 		'use_featured_image'    => _x( 'Utiliser comme image de mise en avant', 'Overrides the “Use as featured image” phrase for this post type. Ajoutered in 4.3', 'textdomain' ),
-		'archives'              => _x( 'catégorie archives', 'The post type archive label used in nav menus. Default “Post Archives”. Ajoutered in 4.4', 'textdomain' ),
-		'insert_into_item'      => _x( 'Insert into catégorie', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Ajoutered in 4.4', 'textdomain' ),
-		'uploaded_to_this_item' => _x( 'Uploaded to this catégorie', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Ajoutered in 4.4', 'textdomain' ),
-		'filter_items_list'     => _x( 'Filter catégories list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Ajoutered in 4.4', 'textdomain' ),
-		'items_list_navigation' => _x( 'catégories list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Ajoutered in 4.4', 'textdomain' ),
-		'items_list'            => _x( 'catégories list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Ajoutered in 4.4', 'textdomain' ),
+		'archives'              => _x( 'Article archives', 'The post type archive label used in nav menus. Default “Post Archives”. Ajoutered in 4.4', 'textdomain' ),
+		'insert_into_item'      => _x( 'Insert into Article', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Ajoutered in 4.4', 'textdomain' ),
+		'uploaded_to_this_item' => _x( 'Uploaded to this Article', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Ajoutered in 4.4', 'textdomain' ),
+		'filter_items_list'     => _x( 'Filter Articles list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Ajoutered in 4.4', 'textdomain' ),
+		'items_list_navigation' => _x( 'Articles list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Ajoutered in 4.4', 'textdomain' ),
+		'items_list'            => _x( 'Articles list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Ajoutered in 4.4', 'textdomain' ),
 	);
 
 	$args = array(
@@ -88,7 +88,7 @@ function custom_cathegories() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'cathegorie' ),
+		'rewrite'            => array( 'slug' => 'article' ),
         // permet que cela soit similaire au article et non au page
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -98,7 +98,7 @@ function custom_cathegories() {
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 	);
 
-	register_post_type( 'cathegorie', $args );
+	register_post_type( 'article', $args );
 }
 
-add_action( 'init', 'custom_cathegories' );
+add_action( 'init', 'custom_articles' );

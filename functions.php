@@ -40,9 +40,9 @@
         wp_enqueue_style( 'css-theme-default', get_template_directory_uri() .'/assets/css/theme-default.css',  array(), null);
         wp_enqueue_style( 'css-style', get_template_directory_uri() .'/assets/css/style.css',  array(), null);
         // css restant qui ne sont pas dans l'index HTML de base
+        wp_enqueue_style( 'css-font-awesome', get_template_directory_uri() .'/assets/css/font-awesome.all.min.css',  array(), null);
         wp_enqueue_style( 'css-slick', get_template_directory_uri() .'/assets/css/slick.css',  array(), null );
         wp_enqueue_style( 'css-flaticon', get_template_directory_uri() .'/assets/css/flaticon.css',  array(), null);
-        wp_enqueue_style( 'css-font-awesome', get_template_directory_uri() .'/assets/css/font-awesome.all.min.css',  array(), null);
         wp_enqueue_style( 'css-icofont', get_template_directory_uri() .'/assets/css/icofont.min.css',  array(), null );
     }
 

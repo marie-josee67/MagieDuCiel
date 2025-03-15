@@ -108,3 +108,8 @@ function extrait(){
     return 22;
 }
 add_filter('excerpt_length', 'extrait');
+
+// création de menu
+register_nav_menus( array (
+    "Header" => "En-tête",
+));

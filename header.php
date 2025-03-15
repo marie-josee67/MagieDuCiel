@@ -23,22 +23,46 @@
 						<img class="logo-dark" src="/assets/img/logo/logo_dark.png" alt="Abias logo">
 					</a>
 				</div>
-				<div class="main-menu main-menu-dark ml-auto">
+				<!-- mise en place du menu -->
+				<?php  
+					wp_nav_menu( array (
+						'theme_location' => 'Header',
+						'menu_class' => 'menu-list',
+						'menu_id' => 'nav',
+						'container' => 'div',
+						'container_id' => '',
+						'container_class' => 'main-menu main-menu-dark ml-auto',
+						'depth' => '2'
+					));
+				?>
+				<!-- mise en place du menu mobile -->
+				<?php  
+					wp_nav_menu( array (
+						'theme_location' => 'Header',
+						'menu_class' => 'menu-list',
+						'menu_id' => 'nav',
+						'container' => 'nav',
+						'container_id' => 'mobile-menu',
+						'container_class' => 'menu',
+						'depth' => '2'
+					));
+				?>
+				<!-- <div class="main-menu main-menu-dark ml-auto">
 					<nav class="menu" id="mobile-menu">
 						<ul class="menu-list" id="nav">
-							<li class="active"><a href="<?php echo home_url(); ?>">Accueil</a>
+							<li class="active"><a href="">Accueil</a>
 							</li>
-							<li><a href="<?php the_permalink(14); ?>">A propos</a>
+							<li><a href="">A propos</a>
 							</li>
-							<li><a href="<?php the_permalink(16); ?>">Blog</a>
+							<li><a href="">Blog</a>
 								<ul class="sub-menu">
 									<li><a href="single.php">Blog Details</a></li>
 								</ul>
 							</li>
-							<li><a href="<?php the_permalink(12); ?>">Contact</a></li>
+							<li><a href="">Contact</a></li>
 						</ul>
 					</nav>
-				</div>
+				</div> -->
 				<div class="mobile-menu mobile-menu-dark"></div>
 			</div>
 		</div>

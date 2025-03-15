@@ -1,7 +1,7 @@
 <?php
 	get_header();
 ?>
-
+<!-- le single est lier ici au blog car pas de fichier spécifique au post type là hierarchie palie le manque-->
 <!--  Breadcrumbs area start -->
 <div class="breadcrumbs-area breadcrumbs-area-innerpage" data-overlay="3" data-background="assets/img/bg/header-banner.jpg">
 		<div class="container-fluid">

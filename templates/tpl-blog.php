@@ -64,7 +64,7 @@
 								</div>
 								<span class="blog-title"><?php the_title(); ?></span>
 								
-								<!-- mais un extrait de l'article -->
+								<!--faire apparaitre un extrait de l'article -->
 								<?php  the_excerpt()?>
 							</div>
 							<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition">Lire plus</a>

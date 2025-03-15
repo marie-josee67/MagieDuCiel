@@ -102,3 +102,9 @@ function custom_articles() {
 }
 
 add_action( 'init', 'custom_articles' );
+
+// function qui permet de réduire la taille de l'extrait dans les articles de blog.
+function extrait(){
+    return 22;
+}
+add_filter('excerpt_length', 'extrait');

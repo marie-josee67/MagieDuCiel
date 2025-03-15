@@ -83,20 +83,6 @@
 					<?php 
 						} 
 					?>
-
-					<div class="mb-50"></div>
-						<div class="pagination">
-							<ul class="pagination-list">
-								<li><a href="#"><i class="icofont-simple-left"></i></a></li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="icofont-simple-right"></i></a></li>
-							</ul>
-						</div>
-						<div class="mb-50"></div>
-					</div>
 					<!-- / Blog post area end -->
 
 					<!-- Blog Widget Area Start -->

@@ -23,7 +23,9 @@
 			</div>
 			<!-- / Footer Widget area end-->
 			<div class="copyright">
-				<p>&copy; 2025 | Tous droits réserver </p>
+
+				<!-- dynamiser pour que l'année se met à jour automatiquement -->
+				<p>&copy; <?php echo date('Y');?> | Tous droits réserver </p>
 			</div>
 		</div>
 	</div>

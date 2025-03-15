@@ -64,6 +64,7 @@
                             
 							<!-- Single Widget  barre de recherche-->
 							<div class="blog-widget-item mb-30">
+								<!-- formulaire de recherche -->
 								<form role="search" method="get" class="search-form" action="#"> 
 									<input type="search" class="search-field" placeholder="Search" value="" name="s">
 									<button type="submit" class="search-submit gr-transition"><i class="icofont-search-1"></i></button>

@@ -10,7 +10,7 @@
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
 					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
-					<li><a href="<?php the_permalink(16); ?>">Blog</a></li>
+					<li><a href="<?php the_permalink(16); ?>">Articles</a></li>
 					<li class="active"><?php the_title(); ?></li>
 
 				</ul>

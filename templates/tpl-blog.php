@@ -42,6 +42,7 @@
 							// création d'une varaible pour stocker les données de la BDD
 							$the_query = new WP_Query(array(
 								'posts_per_page' => -1, // tous les articles
+								'post_type' =>'article',
 								'orderby' => 'date',
 								'order' => 'DESC',
 							));

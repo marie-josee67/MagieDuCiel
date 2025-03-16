@@ -36,7 +36,7 @@
 					));
 				?>
 				<!-- mise en place du menu mobile -->
-				<?php  
+				<!-- <?php  
 					wp_nav_menu( array (
 						'theme_location' => 'Header',
 						'menu_class' => 'menu-list',
@@ -46,7 +46,7 @@
 						'container_class' => 'menu',
 						'depth' => '2'
 					));
-				?>
+				?> -->
 				<!-- <div class="main-menu main-menu-dark ml-auto">
 					<nav class="menu" id="mobile-menu">
 						<ul class="menu-list" id="nav">

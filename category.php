@@ -2,8 +2,11 @@
 
 <main class="category-articles">
     <h1><?php single_cat_title(); ?></h1>
-    
-    <?php if (have_posts()) : ?>
+    <?php 
+    // Inclure un template du'n autre page ici blog.php
+    get_template_part('template-parts/tpl-blog.php'); 
+
+    if (have_posts()) : ?>
         <div class="article-list">
             <?php while (have_posts()) : the_post(); ?>
                 <article class="article-item">

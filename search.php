@@ -11,7 +11,7 @@
 			<div class="breadcrumbs">
 				<ul class="breadcrumbs-list">
 					<li><a href="<?php echo home_url(); ?>">Accueil</a></li>
-					<li class="active"><a href="#">Résultats de recherche</a></li>
+					<li class="active">Résultats de recherche pour <?php echo $_GET['s']; ?></li>
 				</ul>
 			</div>
 		</div>

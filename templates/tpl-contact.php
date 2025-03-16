@@ -82,8 +82,7 @@
 					<div class="col-md-6">
 						<!-- Contact Box-->
 						<div class="contact-box contact-box-page mb-80">
-							<span class="form-subtitle mb-20 d-block">Formulaire de contact</span>
-							<h4 class="form-title mb-70">Get in touch</h4>
+							<h4 class="form-title mb-70">Formulaire de contact</h4>
 							<div class="row">
 								<div class="col-12">
 									<div class="alert alert-success contact__msg" style="display: none" role="alert">
@@ -91,9 +90,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- formulaire -->
-							<div id="contact-form">
-								<?php echo do_shortcode('[contact-form-7 id="26bf25a" title="Formulaire de contact Magie Du Ciel"]'); ?>
+							 <!-- formulaire -->
+							  <div id="contact-form">
+							  <?php echo do_shortcode('[contact-form-7 id="26bf25a" title="Formulaire de contact Magie Du Ciel"]'); ?>
  							</div>
 						</div>
 						<!-- / Contact -->

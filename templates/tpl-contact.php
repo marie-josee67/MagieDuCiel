@@ -84,48 +84,17 @@
 						<div class="contact-box contact-box-page mb-80">
 							<span class="form-subtitle mb-20 d-block">Formulaire de contact</span>
 							<h4 class="form-title mb-70">Get in touch</h4>
-							 <!-- formulaire -->
-							  <?php echo do_shortcode('[contact-form-7 id="26bf25a" title="Formulaire de contact Magie Du Ciel"]'); ?>
-							  <form action="assets/message.php" method="POST" class="abias-form contact-form contact-form-page">
- 								<!-- form message -->
- 								<div class="row">
- 									<div class="col-12">
- 										<div class="alert alert-success contact__msg" style="display: none" role="alert">
- 											Thank You, <b id="get-name"></b> Your message was sent successfully.
- 										</div>
- 									</div>
- 								</div>
- 								<!--  message -->
- 								<div class="row">
- 									<div class="col-md-6">
- 										<div class="field-area">
- 											<input name="name" type="text" id="name" class="" required>
- 											<label for="name">Your Name</label>
- 										</div>
- 									</div>
- 									<div class="col-md-6">
- 										<div class="field-area">
- 											<input name="email" type="email" id="email" class="email" required>
- 											<label for="email">Your Email</label>
- 										</div>
- 									</div>
- 									<div class="col-12">
- 										<div class="field-area">
- 											<input name="subject" type="text" id="subject" class="" required>
- 											<label for="subject">Subject</label>
- 										</div>
- 									</div>
- 									<div class="col-12">
- 										<div class="field-area message-area">
- 											<textarea name="message" id="message" class="abias-field message-field" required></textarea>
- 											<label for="message">Message</label>
- 										</div>
- 									</div>
- 								</div>
- 								<div class="contact-btn mt-25">
- 									<button type="submit" class="gr-btn gr-btn-blue msg-submit">Direction le Ciel<i class="icofont-caret-right"></i></button>
- 								</div>
- 							</form>
+							<div class="row">
+								<div class="col-12">
+									<div class="alert alert-success contact__msg" style="display: none" role="alert">
+										Bonjour, <b id="get-name"></b> Pour prendre contact avec la Magie du Ciel.
+									</div>
+								</div>
+							</div>
+							<!-- formulaire -->
+							<div id="contact-form">
+								<?php echo do_shortcode('[contact-form-7 id="26bf25a" title="Formulaire de contact Magie Du Ciel"]'); ?>
+ 							</div>
 						</div>
 						<!-- / Contact -->
 					</div>

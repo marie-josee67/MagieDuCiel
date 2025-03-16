@@ -64,8 +64,8 @@
                             
 							<!-- Single Widget  barre de recherche-->
 							<div class="blog-widget-item mb-30">
-								<form role="search" method="get" class="search-form" action="#"> 
-									<input type="search" class="search-field" placeholder="Search" value="" name="s">
+								<form role="search" method="get" class="search-form" action="<?php echo home_url(); ?>"> 
+									<input type="search" class="search-field" placeholder="Rechercher" value="" name="s" id="s">
 									<button type="submit" class="search-submit gr-transition"><i class="icofont-search-1"></i></button>
 								</form>
 							</div>

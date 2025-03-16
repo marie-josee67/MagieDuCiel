@@ -7,9 +7,8 @@
 					<!-- Single Wodget -->
 					<div class="col-lg-4 col-sm-8">
 						<div class="footer-widget footer-widget-about">
-							<h4 class="footer-widget-title">Abias</h4>
+							<h4 class="footer-widget-title">Réseaux sociaux</h4>
 							<div class="footer-widget-content">
-								<p>We are absolute kopa sa company, if you have any doute please samne is ese kotha bol, pagla molom lagaibo.</p>
 								<ul class="footer-widget-social">
 									<li><a target="_blank" class="icofont-facebook" href="#"></a></li>
 									<li><a target="_blank" class="icofont-vimeo" href="#"></a></li>
@@ -25,7 +24,9 @@
 			<div class="copyright">
 
 				<!-- dynamiser pour que l'année se met à jour automatiquement -->
-				<p>&copy; <?php echo date('Y');?> | Tous droits réserver </p>
+				<p>&copy; <?php echo date('Y');?> |
+				<!-- Mise en place pour le module de traduction -->
+				<?php _e(' Tous droits réserver','traduction'); ?>
 			</div>
 		</div>
 	</div>

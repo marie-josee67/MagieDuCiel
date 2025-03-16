@@ -113,3 +113,16 @@ add_filter('excerpt_length', 'extrait');
 register_nav_menus( array (
     "Header" => "En-tête",
 ));
+
+
+function filter_articles_by_category($query) {
+    // Vérifie si c'est une requête principale et une page de catégorie
+    if ($query->is_category() && $query->is_main_query()) {
+        // Exemple d'une modification de la requête pour filtrer par post type
+        if (is_category()) {
+            // Si tu veux filtrer les articles de ton post type personnalisé 'article'
+            $query->set('post_type', 'article');
+        }
+    }
+}
+add_action('pre_get_posts', 'filter_articles_by_category');

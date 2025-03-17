@@ -38,12 +38,11 @@
 					<div class="map-wrapper">
 						<div class="map-location">
 							<address>
-								Magie du Ciel <br>
-								site internet
+								<?php the_field('adresse_carte'); ?>
 							</address> 
 						</div>
 						<div class="map-contact">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115835.00563776841!2d90.29484194250588!3d24.86917959513587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sen!2sbd!4v1617947216604!5m2!1sen!2sbd" width="600" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe src="<?php the_field('carte_map'); ?>" width="600" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 						</div>
 					</div>
 				</div>
@@ -56,24 +55,37 @@
 					<div class="col-md-6">
 						<div class="subscribe-newsletter m-mb-30">
 							<div class="subscribe coming-sub">
-								<span class="form-subtitle mb-20 d-block">Newsletter</span>
-								<h4 class="form-title mb-70">S'abonner</h4>
+								<!-- <span class="form-subtitle mb-20 d-block">Newsletter</span>
+								<h4 class="form-title mb-70">S'abonner</h4> -->
+								<span class="form-subtitle mb-20 d-block"><?php the_field('titre_contact'); ?></span>
+								<h4 class="form-title mb-70"><?php the_field('sous-titre_contact'); ?></h4>
 								<form method="POST" action="#" id="subscribe-form" class="subscribe-form subscribe-form-contact">
 									<label for="sub-email"></label>
 									<input type="email" name="email" id="sub-email" placeholder="Votre E-mail" required>
-									<button class="gr-btn gr-btn-blue" type="submit" form="subscribe-form" value="Submit">S'inscrire <i class="icofont-caret-right"></i></button>
+									<button class="gr-btn gr-btn-blue" type="submit" form="subscribe-form" value="Submit"><?php the_field('texte_bouton_inscription'); ?><i class="icofont-caret-right"></i></button>
 								</form>
-								<p class="subscribe-text subscribe-text-contact">Soyez au courant des dernières infos ! </p>
+								<!-- <p class="subscribe-text subscribe-text-contact">Soyez au courant des dernières infos ! </p> -->
+								<p class="subscribe-text subscribe-text-contact"><?php the_field('texte_contact'); ?></p>
 							</div>
 							<div class="social-links social-links-dodgeblue mt-80">
-								<h5 class="coming-social-titile mb-30">Réseaux sociaux</h5>
+								<!-- <h5 class="coming-social-titile mb-30">Réseaux sociaux</h5> -->
+								<h5 class="coming-social-titile mb-30"><?php the_field('titre_reseaux_sociaux'); ?></h5>
 								<ul class="social-list">
-									<li><a target="_blank" class="icofont-pinterest" href="#"></a></li>
-									<li><a target="_blank" class="icofont-facebook" href="#"></a></li>
-									<li><a target="_blank" class="icofont-twitter" href="#"></a></li>
-									<li><a target="_blank" class="icofont-dribble" href="#"></a></li>
-									<li><a target="_blank" class="icofont-behance" href="#"></a></li>
-									<li><a target="_blank" class="icofont-linkedin" href="#"></a></li>
+									<?php if (get_field('pinterest_url')) { ?>
+										<li><a target="_blank" class="" href="<?php the_field('pinterest_url'); ?>"><?php the_field('pinterest_icone'); ?></a></li>
+									<?php } ?>
+									<?php if (get_field('facebook_url')) { ?>
+										<li><a target="_blank" class="" href="<?php the_field('facebook_url'); ?>"><?php the_field('facebook_icone'); ?></a></li>
+									<?php } ?>
+									<?php if (get_field('twitter_url')) { ?>
+										<li><a target="_blank" class="" href="<?php the_field('twitter_url'); ?>"><?php the_field('twitter_icone'); ?></a></li>
+									<?php } ?>
+									<?php if (get_field('instagram_url')) { ?>
+										<li><a target="_blank" class="" href="<?php the_field('instagram_url'); ?>"><?php the_field('instagram_icone'); ?></a></li>
+									<?php } ?>
+									<?php if (get_field('linkedin_url')) { ?>
+										<li><a target="_blank" class="" href="<?php the_field('linkedin_url'); ?>"><?php the_field('linkedin_icone'); ?></a></li>
+									<?php } ?>
 								</ul>
 							</div>
 						</div>
@@ -82,11 +94,13 @@
 					<div class="col-md-6">
 						<!-- Contact Box-->
 						<div class="contact-box contact-box-page mb-80">
-							<h4 class="form-title mb-70">Formulaire de contact</h4>
+							<!-- <h4 class="form-title mb-70">Formulaire de contact</h4> -->
+							<h4 class="form-title mb-70"><?php the_field('titre_formulaire_de_contact'); ?></h4>
 							<div class="row">
 								<div class="col-12">
 									<div class="alert alert-success contact__msg" style="display: none" role="alert">
-										Bonjour, <b id="get-name"></b> Pour prendre contact avec la Magie du Ciel.
+										<!-- Bonjour, <b id="get-name"></b> Pour prendre contact avec la Magie du Ciel. -->
+										<?php the_field('texte_formulaire_de_contact'); ?>
 									</div>
 								</div>
 							</div>

@@ -93,7 +93,7 @@
 	<!--=========| / About Section |=========-->
 
 	<!--=========|  Experience Section |=========-->
-	<section class="experience pt-60 pb-100" id="experience" data-background="<?php the_post_thumbnail_url();?>" data-overlay="6">
+	<section class="experience pt-60 pb-100" id="experience" data-background="/assets/img/bg/dark_experience_bg.jpgg" data-overlay="9">
 		<div class="container">
 			<div class="experience-wrapper">
 				<div class="section-heading section-heading-white">
@@ -176,7 +176,7 @@
 	<!--=========| / Experience Section |=========-->
 
 	<!--=========|  Service Section - blog |=========-->
-	<section class="service service-dark pt-60 pb-20" id="service" data-background="/assets/img/bg/stats_bg.png">
+	<section class="service service-dark pt-60 pb-20" id="service" data-background="/assets/img/bg/dark_service_bg.jpg" data-overlay="9">
 		<div class="container">
 			<div class="service-wrapper">
 				<div class="section-heading section-heading-white">
@@ -192,7 +192,7 @@
 							$the_query = new WP_Query(array(
 								'posts_per_page' => 6, // seulement 6 articles
 								'post_type' =>'article',
-								'orderby' => 'rand', // articles aléatoire
+								'orderby' => 'rand',
 							));
 								// On teste si des données sont retournées par la requêtes SQL
 								if ($the_query->have_posts() ) {
@@ -250,7 +250,7 @@
 	<!--=========| / Skill Section |=========-->
 
 	<!--=========|  Feedback Section |=========-->
-	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="<?php the_post_thumbnail_url();?>" data-overlay="6">
+	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="/assets/img/bg/feedback_bg.jpg" data-overlay="9">
 		<div class="container">
 			<div class="feedback-wrapper">
 				<div class="section-heading section-heading-white">
@@ -290,6 +290,154 @@
 		</div>
 	</section>
 	<!--=========| / Feedback Section |=========-->
+
+	<!--=========|  Fun Fact Section |=========-->
+	<section class="funfact bg-dark" id="funfact">
+		<div class="container-fluid">
+			<div class="funfact-wrapper z-index-2" id="counters_two">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="funfact-item">
+							<h3 class="fun-count counter" data-TargetNum="5000" data-Speed="6000">0</h3>
+							<h5 class="fun-name">Étoiles</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="funfact-item">
+							<h3 class="fun-count counter" data-TargetNum="88" data-Speed="6000">0</h3>
+							<h5 class="fun-name">Constellation</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="funfact-item">
+							<h3 class="fun-count counter" data-TargetNum="8" data-Speed="6000">0</h3>
+							<h5 class="fun-name">Planètes</h5>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="funfact-item">
+							<h3 class="fun-count counter" data-TargetNum="700" data-Speed="6000">0</h3>
+							<h5 class="fun-name">Émotion ressentit en 1 an</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=========| / Fun Fact Section |=========-->
+
+	<!--=========|  Blog Section |=========-->
+	<section class="blog blog-dark pt-60 pb-100" id="blog" data-background="/assets/img/bg/dark_blog_bg.jpg" data-overlay="8">
+		<div class="container">
+			<div class="blog-wrapper">
+				<div class="section-heading section-heading-white">
+					<h2 class="section-title">Blog</h2>
+					<h3 class="section-subtitle">Articles</h3>
+				</div>
+				<div class="blog-area">
+					<div class="row justify-content-center">
+						<!-- Blog Item Single -->
+						<div class="col-lg-4 col-md-6">
+							<div class="blog-item-dark">
+								<a href="single.html" class="blog-thumb">
+									<img src="/assets/img/blog/dark_blog_1.jpg" alt="blog image">
+								</a>
+								<div class="blog-content-area">
+									<div class="blog-contents">
+										<div class="blog-tags">
+											<a href="#">Planètes</a>
+										</div>
+										<a href="single.html" class="blog-title">Il y a 8 planètes dans notre système solaire!</a>
+										<p class="blog-desc"> Elles sont, par ordre de proximité au Soleil : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune . 
+										<br>
+										Autrefois, Pluton était considérée comme la neuvième planète, mais en 2006, l'Union Astronomique Internationale (UAI) a reclassé Pluton en tant que planète naine en raison de sa taille et de son orbite particulière.
+										<br>
+										En dehors de notre système solaire, on découvre également de nombreuses exoplanètes qui orbitent autour d'autres étoiles, mais dans notre système solaire, ce sont les huit planètes principales.</p>
+										<div class="blog-btn">
+											<a href="single.html" class="btn-more btn-more-2">Voir plus</a>
+										</div>
+									</div>
+									<div class="blog-meta d-flex">
+										<div class="blog-author">
+											<a href="#" class="author-avator">
+												<img src="/assets/img/people/author.png" alt="auhtor">
+											</a>
+											<a href="#" class="author-name">Mr ExpertEspace</a>
+										</div>
+										<a href="#" class="blog-date ml-auto">12/03/20025</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Blog Item Single -->
+						<div class="col-lg-4 col-md-6">
+							<div class="blog-item-dark">
+								<a href="single.html" class="blog-thumb">
+									<img src="/assets/img/blog/dark_blog_2.jpg" alt="blog image">
+								</a>
+								<div class="blog-content-area">
+									<div class="blog-contents">
+										<div class="blog-tags">
+											<a href="#">Contellation/a>
+										</div>
+										<a href="single.html" class="blog-title">Il y a 88 constellations officiellement reconnues par l'Union Astronomique Internationale (UAI)</a>
+										<p class="blog-desc">. Ces constellations couvrent l'ensemble du ciel visible depuis la Terre. Certaines sont bien connues, comme le Grand Chariot (partie de la constellation de la Grande Ourse) ou Orion, tandis que d'autres sont moins familières.
+										<br>
+										Les constellations sont utilisées pour diviser le ciel en différentes régions, facilitant ainsi l'orientation et l'étude des objets célestes. Certaines constellations sont visibles uniquement pendant certaines saisons ou depuis certains endroits de la Terre.</p>
+										<div class="blog-btn">
+											<a href="single.html" class="btn-more btn-more-2">Read More</a>
+										</div>
+									</div>
+									<div class="blog-meta d-flex">
+										<div class="blog-author">
+											<a href="#" class="author-avator">
+												<img src="/assets/img/people/author.png" alt="auhtor">
+											</a>
+											<a href="#" class="author-name">Mlle PetiteOurse</a>
+										</div>
+										<a href="#" class="blog-date ml-auto">01/12/2024</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Blog Item Single -->
+						<div class="col-lg-4 col-md-6">
+							<div class="blog-item-dark">
+								<a href="single.html" class="blog-thumb">
+									<img src="/assets/img/blog/dark_blog_3.jpg" alt="blog image">
+								</a>
+								<div class="blog-content-area">
+									<div class="blog-contents">
+										<div class="blog-tags">
+											<a href="#">Foudre</a>
+										</div>
+										<a href="single.html" class="blog-title">Formation de la foudre !</a>
+										<p class="blog-desc">Dans les nuages d'orage, les gouttes d'eau et les cristaux de glace se déplacent et se frottent les uns contre les autres, ce qui génère une accumulation de charges électriques. Les charges négatives (électrons) s'accumulent à la base du nuage, tandis que les charges positives se concentrent à la partie supérieure du nuage. 
+										<br>
+										Cela crée une différence de potentiel électrique très forte. Quand cette différence devient trop grande, l'air, qui est normalement un isolant, se décharge soudainement sous forme de foudre.</p>
+										<div class="blog-btn">
+											<a href="single.html" class="btn-more btn-more-2">Read More</a>
+										</div>
+									</div>
+									<div class="blog-meta d-flex">
+										<div class="blog-author">
+											<a href="#" class="author-avator">
+												<img src="/assets/img/people/author.png" alt="auhtor">
+											</a>
+											<a href="#" class="author-name">Mme Foudreuse</a>
+										</div>
+										<a href="#" class="blog-date ml-auto">24/02/2025</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--=========| / Blog Section |=========-->
+
 </main>
 <!--=========|  Main Content |=========-->
 

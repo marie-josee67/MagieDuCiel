@@ -63,15 +63,6 @@
 							</div>
 							<!-- <p class="about-text">Passionner du ciel, si vous êtes au courant d'une informations qui n'est pas encore resencer dit le nous!</p> -->
 							<p class="about-text"><?php the_field('texte');?></p>
-							<div class="social-links">
-								<ul>
-									<li><a target="_blank" href="#" class="icofont-facebook"></a></li>
-									<li><a target="_blank" href="#" class="icofont-vimeo"></a></li>
-									<li><a target="_blank" href="#" class="icofont-behance"></a></li>
-									<li><a target="_blank" href="#" class="icofont-deviantart"></a></li>
-									<li><a target="_blank" href="#" class="icofont-dribble"></a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</div>

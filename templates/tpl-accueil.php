@@ -75,8 +75,8 @@
 							</div>
 							<p class="about-text">Bonjour, <b>le ciel est magique</b> il nous fait rêver, imaginer, découvrir, se préparer au temps qui passe</p> -->
 							<div class="section-heading section-heading-white section-heading-dark-about">
-								<h2 class="section-title"><?php the_field('titre'); ?></h2>
-								<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
+								<h2 class="section-title"><?php the_field('titre_a_propos'); ?></h2>
+								<h3 class="section-subtitle"><?php the_field('sous-titre_a_propos'); ?></h3>
 							</div>
 							<p class="about-text"><?php the_field('texte'); ?></p>
 
@@ -99,8 +99,8 @@
 				<div class="section-heading section-heading-white">
 					<!-- <h2 class="section-title">Les découvertes</h2>
 					<h3 class="section-subtitle">de la nature</h3> -->
-					<h2 class="section-title"><?php the_field('titre'); ?></h2>
-					<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
+					<h2 class="section-title"><?php the_field('titre_experience'); ?></h2>
+					<h3 class="section-subtitle"><?php the_field('sous-titre_experience'); ?></h3>
 				</div>
 				<div class="experience-area">
 					<div class="row justify-content-around">
@@ -182,8 +182,8 @@
 				<div class="section-heading section-heading-white">
 					<!-- <h2 class="section-title">Blog</h2>
 					<h3 class="section-subtitle">Mes Articles</h3> -->
-					<h2 class="section-title"><?php the_field('titre'); ?></h2>
-					<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
+					<h2 class="section-title"><?php the_field('titre_service'); ?></h2>
+					<h3 class="section-subtitle"><?php the_field('sous-titre_service'); ?></h3>
 				</div>
 				<div class="service-area mt-80">
 					<div class="row">
@@ -236,62 +236,66 @@
 		<div class="container">
 			<div class="skill-wrapper">
 				<div class="section-heading section-heading-white">
-					<h2 class="section-title">L'Univers</h2>
+					<!-- <h2 class="section-title">L'Univers</h2>
 					<h3 class="section-subtitle">On est si petit </h3>
-					<p class="heading-text">Un grain de sable dans limanciter du temps et de l'espace. Nous ne somme qu'une ombre face à l'infini!</p>
+					<p class="heading-text">Un grain de sable dans l'immensité du temps et de l'espace. Nous ne sommes qu'une ombre face à l'infini !</p> -->
+					<h2 class="section-title"><?php the_field('titre_message'); ?></h2>
+					<h3 class="section-subtitle"><?php the_field('sous-titre_message'); ?></h3>
+					<p class="heading-text"><?php the_field('texte_message'); ?></p>
 				</div>
 				
 			</div>
 		</div>
 		<div class="skill-dots skill-dots-left">
-			<img src="/assets/img/shapes/skill_dots_left.png" alt="">
+			<img src="<?php the_field('image_1'); ?>" alt="">
 		</div>
 		<div class="skill-dots skill-dots-right">
-			<img src="/assets/img/shapes/skill_dots_left.png" alt="">
+			<img src="<?php the_field('image_2'); ?>" alt="">
 		</div>
 	</section>
 	<!--=========| / Skill Section |=========-->
 
-	<!--=========|  Feedback Section |=========-->
-	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="/assets/img/bg/feedback_bg.jpg" data-overlay="9">
-		<div class="container">
-			<div class="feedback-wrapper">
-				<div class="section-heading section-heading-white">
-					<h2 class="section-title">Commentaires</h2>
-					<h3 class="section-subtitle">avis</h3>
-				</div>
-				<div class="feedback-area">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-12 feedback-slides">
-							<!-- Feedback Single -->
-							<div class="feedback-item">
-								<div class="feedback-thumb">
-									<img src="/assets/img/people/client_4.png" alt="client">
-								</div>
-								<div class="feedback-client-profile">
-									<h5 class="client-name">John Hafty</h5>
-									<div class="client-designation">Amateur</div>
-								</div>
-								<p class="client-comment">J'ai vue la lune orange cette nuit du 10 juillet 2024. Sa nuance de couleur était magnifique et que dire de sa taille si prêt de la Terre.</p>
-							</div>
-							<!-- Feedback Single -->
-							<div class="feedback-item">
-								<div class="feedback-thumb">
-									<img src="/assets/img/people/client_3.png" alt="client">
-								</div>
-								<div class="feedback-client-profile">
-									<h5 class="client-name">AstroUnivers</h5>
-									<div class="client-designation">novice</a></div>
-									
-								</div>
-								<p class="client-comment">J'ai acheter un télescope pour voir l'étoile filante, je découvre l'univers de l'espace.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<!--=========|  Feedback Section - commentaire |=========-->
+	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" 
+    data-background="<?php the_field('background_image'); ?>" 
+    data-overlay="<?php the_field('overlay_color'); ?>">
+    <div class="container">
+        <div class="feedback-wrapper">
+            <div class="section-heading section-heading-white">
+                <h2 class="section-title"><?php the_field('titre_commentaire'); ?></h2>
+                <h3 class="section-subtitle"><?php the_field('sous-titre_commentaire'); ?></h3>
+            </div>
+            <div class="feedback-area">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-12 feedback-slides">
+                        <?php 
+                        // Récupérer les commentaires des clients
+                        if( have_rows('commentaire_client') ): 
+                            while( have_rows('commentaire_client') ): the_row(); 
+                        ?>
+                        <!-- Feedback Single -->
+                        <div class="feedback-item">
+                            <div class="feedback-thumb">
+                                <img src="<?php the_sub_field('image_client'); ?>" alt="client">
+                            </div>
+                            <div class="feedback-client-profile">
+                                <h5 class="client-name"><?php the_sub_field('nom_client'); ?></h5>
+                                <div class="client-designation"><?php the_sub_field('grade_client'); ?></div>
+                            </div>
+                            <p class="client-comment"><?php the_sub_field('message_client'); ?></p>
+                        </div>
+                        <!-- Feedback Single -->
+                        <?php 
+							endwhile; 
+							endif; 
+						?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 	<!--=========| / Feedback Section |=========-->
 </main>
 <!--=========|  Main Content |=========-->

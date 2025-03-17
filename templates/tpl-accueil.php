@@ -180,8 +180,10 @@
 		<div class="container">
 			<div class="service-wrapper">
 				<div class="section-heading section-heading-white">
-					<h2 class="section-title">Blog</h2>
-					<h3 class="section-subtitle">Mes Articles</h3>
+					<!-- <h2 class="section-title">Blog</h2>
+					<h3 class="section-subtitle">Mes Articles</h3> -->
+					<h2 class="section-title"><?php the_field('titre'); ?></h2>
+					<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
 				</div>
 				<div class="service-area mt-80">
 					<div class="row">
@@ -205,7 +207,7 @@
 								</div>
 								<h3 class="service-title"><?php the_title(); ?></h3>
 								<?php  the_excerpt()?>
-								<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition">Lire plus</a>
+								<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition"><?php the_field('texte_bouton'); ?></a>
 							</div>
 						</div>
 						<?php 
@@ -217,7 +219,8 @@
 							// si la boucle ne retourne rien afficher se texte 
 							else { 
 						?>
-						Il n'y a aucune actualité pour le moment
+						<!-- Il n'y a aucune actualité pour le moment -->
+						<?php the_field('texte_de_secour'); ?>
 						<?php 
 							} 
 						?>

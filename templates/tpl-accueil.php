@@ -93,7 +93,7 @@
 	<!--=========| / About Section |=========-->
 
 	<!--=========|  Experience Section |=========-->
-	<section class="experience pt-60 pb-100" id="experience" data-background="/assets/img/bg/dark_experience_bg.jpgg" data-overlay="9">
+	<section class="experience pt-60 pb-100" id="experience" data-background="<?php the_post_thumbnail_url();?>" data-overlay="6">
 		<div class="container">
 			<div class="experience-wrapper">
 				<div class="section-heading section-heading-white">
@@ -157,15 +157,15 @@
 						<div class="col-lg-9 col-md-12">
 							<div class="experience-item experience-item-alt mt-80">
 								<div class="experience-details text-right">
-									<h3 class="experience-title">Le nombre d'émotions</h3>
-									<p class="experience-desc">Les émotions resenti chaque jour en levant les yeux au ciel</p>
+									<h3 class="experience-title"><?php the_field('titre_experience_4'); ?></h3>
+									<p class="experience-desc"><?php the_field('texte_experience_4'); ?></p>
 									<!-- <h3 class="experience-title">Le nombre d'émotions</h3>
 									<p class="experience-desc">Les émotions ressenties chaque jour en levant les yeux au ciel.</p>-->
 								</div>
 								<div class="experience-icon">
-									<i class="icofont-bird"></i>
+									<i class="<?php the_field('icone_experience_4'); ?>"></i>
 								</div>
-								<div class="time">infini</div>
+								<div class="time"><?php the_field('chiffre_experience_4'); ?></div>
 							</div>
 						</div>
 					</div>
@@ -175,8 +175,8 @@
 	</section>
 	<!--=========| / Experience Section |=========-->
 
-	<!--=========|  Service Section |=========-->
-	<section class="service service-dark pt-60 pb-20" id="service" data-background="/assets/img/bg/dark_service_bg.jpg" data-overlay="9">
+	<!--=========|  Service Section - blog |=========-->
+	<section class="service service-dark pt-60 pb-20" id="service" data-background="/assets/img/bg/stats_bg.png">
 		<div class="container">
 			<div class="service-wrapper">
 				<div class="section-heading section-heading-white">
@@ -187,71 +187,40 @@
 					<div class="row">
 						<!-- Service Single -->
 						<div class="col-lg-4 col-sm-6">
+						<?php 
+							// création d'une varaible pour stocker les données de la BDD
+							$the_query = new WP_Query(array(
+								'posts_per_page' => 6, // seulement 6 articles
+								'post_type' =>'article',
+								'orderby' => 'rand', // articles aléatoire
+							));
+								// On teste si des données sont retournées par la requêtes SQL
+								if ($the_query->have_posts() ) {
+								// s'il y a des données, on boucle dessus
+								while($the_query->have_posts()) {$the_query->the_post();
+						?>
 							<div class="service-item-dark">
 								<div class="service-icon-dark">
 									<i class="fas fa-laptop-code"></i>
 								</div>
-								<h3 class="service-title">Étoiles</h3>
-								<p class="service-desc">Les 5 000 font partie de notre propre galaxie, la Voie lactée, mais il existe bien sûr des milliards d'autres étoiles qui sont invisibles à l'œil nu, même avec des télescopes puissants.</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
+								<h3 class="service-title"><?php the_title(); ?></h3>
+								<?php  the_excerpt()?>
+								<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition">Lire plus</a>
 							</div>
 						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark">
-								<div class="service-icon-dark">
-									<i class="fas fa-cogs"></i>
-								</div>
-								<h3 class="service-title">Constellation</h3>
-								<p class="service-desc">Elles sont utilisées pour diviser le ciel en différentes régions, facilitant ainsi l'orientation et l'étude des objets célestes. Certaines constellations sont visibles uniquement pendant certaines saisons ou depuis certains endroits de la Terre.</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark">
-								<div class="service-icon-dark">
-									<i class="icofont-brand-android-robot"></i>
-								</div>
-								<h3 class="service-title">Les planètes</h3>
-								<p class="service-desc">Autrefois, Pluton était considérée comme la neuvième planète, mais en 2006, l'Union Astronomique Internationale (UAI) a reclassé Pluton en tant que planète naine en raison de sa taille et de son orbite particulière.<br>
-								En dehors de notre système solaire, on découvre également de nombreuses exoplanètes qui orbitent autour d'autres étoiles, mais dans notre système solaire, ce sont les huit planètes principales.s</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark">
-								<div class="service-icon-dark">
-									<i class="fab fa-stack-overflow"></i>
-								</div>
-								<h3 class="service-title">La foudre</h3>
-								<p class="service-desc">La foudre et les éclairs sont des phénomènes électriques spectaculaires qui se produisent lors des orages, et ils sont liés à des décharges électriques dans l'atmosphère.</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark">
-								<div class="service-icon-dark">
-									<i class="icofont-chart-growth"></i>
-								</div>
-								<h3 class="service-title">Les nuages</h3>
-								<p class="service-desc">Les nuages sont des masses de vapeur d'eau ou de cristaux de glace en suspension dans l'atmosphère. Ils se forment lorsque l'air humide se refroidit, permettant à la vapeur d'eau de se condenser en minuscules gouttes ou cristaux. Ces gouttes ou cristaux sont si petits qu'ils restent en suspension dans l'air.</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
-							</div>
-						</div>
-						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="service-item-dark">
-								<div class="service-icon-dark">
-									<i class="fas fa-headset"></i>
-								</div>
-								<h3 class="service-title">Les arc-en-ciel</h3>
-								<p class="service-desc">Les arc-en-ciel sont des phénomènes optiques et météorologiques fascinants, généralement observés après une pluie, lorsqu'il y a de la lumière du soleil et des gouttes d'eau en suspension dans l'air. Ils se forment lorsque la lumière est réfractée, réfléchie et dispersée à travers les gouttes d'eau.</p>
-								<a href="single-service.html" class="btn-more">Voir plus</a>
-							</div>
-						</div>
+						<?php 
+							// fermeture du while
+							} 
+							wp_reset_postdata();
+							// fermeture du if
+							}
+							// si la boucle ne retourne rien afficher se texte 
+							else { 
+						?>
+						Il n'y a aucune actualité pour le moment
+						<?php 
+							} 
+						?>
 					</div>
 				</div>
 			</div>
@@ -281,7 +250,7 @@
 	<!--=========| / Skill Section |=========-->
 
 	<!--=========|  Feedback Section |=========-->
-	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="/assets/img/bg/feedback_bg.jpg" data-overlay="9">
+	<section class="feedback feedback-dark pt-60 pb-100" id="feedback" data-background="<?php the_post_thumbnail_url();?>" data-overlay="6">
 		<div class="container">
 			<div class="feedback-wrapper">
 				<div class="section-heading section-heading-white">
@@ -321,154 +290,6 @@
 		</div>
 	</section>
 	<!--=========| / Feedback Section |=========-->
-
-	<!--=========|  Fun Fact Section |=========-->
-	<section class="funfact bg-dark" id="funfact">
-		<div class="container-fluid">
-			<div class="funfact-wrapper z-index-2" id="counters_two">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="funfact-item">
-							<h3 class="fun-count counter" data-TargetNum="5000" data-Speed="6000">0</h3>
-							<h5 class="fun-name">Étoiles</h5>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="funfact-item">
-							<h3 class="fun-count counter" data-TargetNum="88" data-Speed="6000">0</h3>
-							<h5 class="fun-name">Constellation</h5>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="funfact-item">
-							<h3 class="fun-count counter" data-TargetNum="8" data-Speed="6000">0</h3>
-							<h5 class="fun-name">Planètes</h5>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="funfact-item">
-							<h3 class="fun-count counter" data-TargetNum="700" data-Speed="6000">0</h3>
-							<h5 class="fun-name">Émotion ressentit en 1 an</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--=========| / Fun Fact Section |=========-->
-
-	<!--=========|  Blog Section |=========-->
-	<section class="blog blog-dark pt-60 pb-100" id="blog" data-background="/assets/img/bg/dark_blog_bg.jpg" data-overlay="8">
-		<div class="container">
-			<div class="blog-wrapper">
-				<div class="section-heading section-heading-white">
-					<h2 class="section-title">Blog</h2>
-					<h3 class="section-subtitle">Articles</h3>
-				</div>
-				<div class="blog-area">
-					<div class="row justify-content-center">
-						<!-- Blog Item Single -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-item-dark">
-								<a href="single.html" class="blog-thumb">
-									<img src="/assets/img/blog/dark_blog_1.jpg" alt="blog image">
-								</a>
-								<div class="blog-content-area">
-									<div class="blog-contents">
-										<div class="blog-tags">
-											<a href="#">Planètes</a>
-										</div>
-										<a href="single.html" class="blog-title">Il y a 8 planètes dans notre système solaire!</a>
-										<p class="blog-desc"> Elles sont, par ordre de proximité au Soleil : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune . 
-										<br>
-										Autrefois, Pluton était considérée comme la neuvième planète, mais en 2006, l'Union Astronomique Internationale (UAI) a reclassé Pluton en tant que planète naine en raison de sa taille et de son orbite particulière.
-										<br>
-										En dehors de notre système solaire, on découvre également de nombreuses exoplanètes qui orbitent autour d'autres étoiles, mais dans notre système solaire, ce sont les huit planètes principales.</p>
-										<div class="blog-btn">
-											<a href="single.html" class="btn-more btn-more-2">Voir plus</a>
-										</div>
-									</div>
-									<div class="blog-meta d-flex">
-										<div class="blog-author">
-											<a href="#" class="author-avator">
-												<img src="/assets/img/people/author.png" alt="auhtor">
-											</a>
-											<a href="#" class="author-name">Mr ExpertEspace</a>
-										</div>
-										<a href="#" class="blog-date ml-auto">12/03/20025</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Blog Item Single -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-item-dark">
-								<a href="single.html" class="blog-thumb">
-									<img src="/assets/img/blog/dark_blog_2.jpg" alt="blog image">
-								</a>
-								<div class="blog-content-area">
-									<div class="blog-contents">
-										<div class="blog-tags">
-											<a href="#">Contellation/a>
-										</div>
-										<a href="single.html" class="blog-title">Il y a 88 constellations officiellement reconnues par l'Union Astronomique Internationale (UAI)</a>
-										<p class="blog-desc">. Ces constellations couvrent l'ensemble du ciel visible depuis la Terre. Certaines sont bien connues, comme le Grand Chariot (partie de la constellation de la Grande Ourse) ou Orion, tandis que d'autres sont moins familières.
-										<br>
-										Les constellations sont utilisées pour diviser le ciel en différentes régions, facilitant ainsi l'orientation et l'étude des objets célestes. Certaines constellations sont visibles uniquement pendant certaines saisons ou depuis certains endroits de la Terre.</p>
-										<div class="blog-btn">
-											<a href="single.html" class="btn-more btn-more-2">Read More</a>
-										</div>
-									</div>
-									<div class="blog-meta d-flex">
-										<div class="blog-author">
-											<a href="#" class="author-avator">
-												<img src="/assets/img/people/author.png" alt="auhtor">
-											</a>
-											<a href="#" class="author-name">Mlle PetiteOurse</a>
-										</div>
-										<a href="#" class="blog-date ml-auto">01/12/2024</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Blog Item Single -->
-						<div class="col-lg-4 col-md-6">
-							<div class="blog-item-dark">
-								<a href="single.html" class="blog-thumb">
-									<img src="/assets/img/blog/dark_blog_3.jpg" alt="blog image">
-								</a>
-								<div class="blog-content-area">
-									<div class="blog-contents">
-										<div class="blog-tags">
-											<a href="#">Foudre</a>
-										</div>
-										<a href="single.html" class="blog-title">Formation de la foudre !</a>
-										<p class="blog-desc">Dans les nuages d'orage, les gouttes d'eau et les cristaux de glace se déplacent et se frottent les uns contre les autres, ce qui génère une accumulation de charges électriques. Les charges négatives (électrons) s'accumulent à la base du nuage, tandis que les charges positives se concentrent à la partie supérieure du nuage. 
-										<br>
-										Cela crée une différence de potentiel électrique très forte. Quand cette différence devient trop grande, l'air, qui est normalement un isolant, se décharge soudainement sous forme de foudre.</p>
-										<div class="blog-btn">
-											<a href="single.html" class="btn-more btn-more-2">Read More</a>
-										</div>
-									</div>
-									<div class="blog-meta d-flex">
-										<div class="blog-author">
-											<a href="#" class="author-avator">
-												<img src="/assets/img/people/author.png" alt="auhtor">
-											</a>
-											<a href="#" class="author-name">Mme Foudreuse</a>
-										</div>
-										<a href="#" class="blog-date ml-auto">24/02/2025</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--=========| / Blog Section |=========-->
-
 </main>
 <!--=========|  Main Content |=========-->
 

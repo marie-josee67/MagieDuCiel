@@ -42,7 +42,7 @@
 							</address> 
 						</div>
 						<div class="map-contact">
-							<iframe src="<?php the_field('carte_map'); ?>" width="600" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42472.43433206535!2d7.373760844319386!3d48.29271219902271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1742233168848!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>

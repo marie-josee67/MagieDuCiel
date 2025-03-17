@@ -38,14 +38,6 @@
 											<b><?php the_field('message_5'); ?></b>
 										</span>
 								</h2>
-								<div class="hero-social">
-									<ul class="social-list">
-										<li><a target="_blank" href="#" class="icofont-skype"></a></li>
-										<li><a target="_blank" href="#" class="icofont-twitter"></a></li>
-										<li><a target="_blank" href="#" class="icofont-behance"></a></li>
-										<li><a target="_blank" href="#" class="icofont-dribble"></a></li>
-									</ul>
-								</div>
 							</div>
 						</div>
 					</div>

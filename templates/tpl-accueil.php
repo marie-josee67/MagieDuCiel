@@ -18,15 +18,24 @@
 					<div class="row hero-height align-items-center">
 						<div class="col-12">
 							<div class="hero-about hero-about-dark text-center">
-								<h1 class="hero-name">Magie du ciel</h1>
+								<!-- <h1 class="hero-name">Magie du ciel</h1> -->
+								<h1 class="hero-name"><?php the_field('nom_du_site'); ?></h1>
 								<h2 class="qualities cd-headline clip" >
-										<span>Continuer</span> 
+										<!-- <span>Continuer</span> 
 										<span class="cd-words-wrapper">
 											<b class="is-visible">de&nbsp;rêver</b>
 											<b>d'&nbsp;imaginer</b>
 											<b>de&nbsp;ressentir</b>
 											<b>de&nbsp;partager</b>
 											<b>de lever&nbsp;les yeux</b>
+										</span> -->
+										<span><?php the_field('verbe'); ?></span>
+										<span class="cd-words-wrapper">
+											<b class="is-visible"><?php the_field('message_1'); ?></b>
+											<b><?php the_field('message_2'); ?></b>
+											<b><?php the_field('message_3'); ?></b>
+											<b><?php the_field('message_4'); ?></b>
+											<b><?php the_field('message_5'); ?></b>
 										</span>
 								</h2>
 								<div class="hero-social">
@@ -48,25 +57,32 @@
 	</section>
 	<!--=========| / Home Section |=========-->
 
-	<!--=========|  About Section |=========-->
+	<!--=========|  About Section - A propos |=========-->
 	<section class="about bg-dark pt-200 pb-200" id="about">
 		<div class="container">
 			<div class="about-wrapper z-index-2">
 				<div class="row">
 					<div class="col-lg-6 col-md-5">
 						<div class="about-img about-img-dark">
-							<img src="assets/img/people/dark_about_man.jpg" alt="About img">
+							<img src="<?php the_field('image'); ?>" alt="About img">
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-7">
+					<div>
 						<div class="about-content about-content-dark">
-							<div class="section-heading section-heading-white section-heading-dark-about">
+							<!-- <div class="section-heading section-heading-white section-heading-dark-about">
 								<h2 class="section-title">A Propos</h2>
 								<h3 class="section-subtitle">A propos de moi</h3>
 							</div>
-							<p class="about-text">Bonjour, <b>le ciel est magique</b> il nous fait rêver, imaginer, découvrir, se préparer au temps qui passe</p>
+							<p class="about-text">Bonjour, <b>le ciel est magique</b> il nous fait rêver, imaginer, découvrir, se préparer au temps qui passe</p> -->
+							<div class="section-heading section-heading-white section-heading-dark-about">
+								<h2 class="section-title"><?php the_field('titre'); ?></h2>
+								<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
+							</div>
+							<p class="about-text"><?php the_field('texte'); ?></p>
+
 							<div class="about-btn mt-30">
-								<a href="about-us.html" class="dark-btn">More<span></span></a>
+								<!-- rajout du lien de la page avec son ID -->
+								<a href="<?php echo get_permalink(14); ?>" class="dark-btn"><?php the_field('bouton_a_propos'); ?><span></span></a>
 							</div>
 						</div>
 					</div>
@@ -81,47 +97,59 @@
 		<div class="container">
 			<div class="experience-wrapper">
 				<div class="section-heading section-heading-white">
-					<h2 class="section-title">Les découvertes</h2>
-					<h3 class="section-subtitle">de la nature</h3>
+					<!-- <h2 class="section-title">Les découvertes</h2>
+					<h3 class="section-subtitle">de la nature</h3> -->
+					<h2 class="section-title"><?php the_field('titre'); ?></h2>
+					<h3 class="section-subtitle"><?php the_field('sous-titre'); ?></h3>
 				</div>
 				<div class="experience-area">
 					<div class="row justify-content-around">
 						<!-- Single Experience -->
 						<div class="col-lg-9 col-md-12">
 							<div class="experience-item mt-80">
-								<div class="time ml-auto">2010</div>
+								<div class="time ml-auto"><?php the_field('chiffre_experience_1'); ?></div>
 								<div class="experience-icon">
-									<i class="icofont-flora-flower"></i>
+									<i class="<?php the_field('icone_experience_1'); ?>"></i>
 								</div>
 								<div class="experience-details">
-									<h3 class="experience-title">Le nombre d'étoiles</h3>
-									<p class="experience-desc"> 5 000 étoiles sont visibles depuis la Terre. Mais tous dépend bien sur de différent facteurs: condition d'observation, de la période de l'année, de la pollution lumineuse ...</p>
+									<h3 class="experience-title"><?php the_field('titre_experience_1'); ?></h3>
+									<p class="experience-desc"> <?php the_field('texte_experience_1'); ?></p>
 								</div>
+								<!-- <div class="experience-details">
+									<h3 class="experience-title">Le nombre d'étoiles</h3>
+									<p class="experience-desc">Visibles depuis la Terre, mais tout dépend bien sûr de différents facteurs.</p>
+								</div> -->
 							</div>
 						</div>
 						<!-- Single Experience -->
 						<div class="col-lg-9 col-md-12">
 							<div class="experience-item experience-item-alt mt-80">
 								<div class="experience-details text-right">
-									<h3 class="experience-title">Le nombres de contellation</h3>
-									<p class="experience-desc">88 constellations officiellement reconnues par l'Union Astronomique Internationale (UAI). Ces constellations couvrent l'ensemble du ciel visible depuis la Terre.</p>
+									<h3 class="experience-title"><?php the_field('titre_experience_2'); ?></h3>
+									<p class="experience-desc"><?php the_field('texte_experience_2'); ?></p>
 								</div>
+								<!-- <div class="experience-details text-right">
+									<h3 class="experience-title">Le nombre de constellations</h3>
+									<p class="experience-desc">Officiellement reconnues par l'Union Astronomique Internationale.</p>
+								</div> -->
 								<div class="experience-icon">
-									<i class="icofont-bird"></i>
+									<i class="<?php the_field('icone_experience_2'); ?>"></i>
 								</div>
-								<div class="time">2025</div>
+								<div class="time"><?php the_field('chiffre_expericence_2'); ?></div>
 							</div>
 						</div>
 						<!-- Single Experience -->
 						<div class="col-lg-9 col-md-12">
 							<div class="experience-item mt-80">
-								<div class="time ml-auto">2025</div>
+								<div class="time ml-auto"><?php the_field('chiffre_experience_3'); ?></div>
 								<div class="experience-icon">
-									<i class="icofont-flora-flower"></i>
+									<i class="<?php the_field('icone_experience_3'); ?>"></i>
 								</div>
 								<div class="experience-details">
-									<h3 class="experience-title">Le nombre de planètes</h3>
-									<p class="experience-desc">8 planète formes notre système solaire.</p>
+									<h3 class="experience-title"><?php the_field('titre_experience_3'); ?></h3>
+									<p class="experience-desc"><?php the_field('texte_experience_3'); ?></p>
+									<!-- <h3 class="experience-title">Le nombre de planètes</h3>
+									<p class="experience-desc">Elles forment notre système solaire.</p> -->
 								</div>
 							</div>
 						</div>
@@ -129,8 +157,10 @@
 						<div class="col-lg-9 col-md-12">
 							<div class="experience-item experience-item-alt mt-80">
 								<div class="experience-details text-right">
-									<h3 class="experience-title">le nombre d'émotions</h3>
+									<h3 class="experience-title">Le nombre d'émotions</h3>
 									<p class="experience-desc">Les émotions resenti chaque jour en levant les yeux au ciel</p>
+									<!-- <h3 class="experience-title">Le nombre d'émotions</h3>
+									<p class="experience-desc">Les émotions ressenties chaque jour en levant les yeux au ciel.</p>-->
 								</div>
 								<div class="experience-icon">
 									<i class="icofont-bird"></i>

@@ -10,30 +10,11 @@
 							<h4 class="footer-widget-title">Réseaux sociaux</h4>
 							<div class="footer-widget-content">
 								<ul class="footer-widget-social">
-
-									<!-- <?php var_dump (get_field('reseaux_sociaux')); ?> -->
-
-									<!-- boucle de répéteur pour les réseaux sociaux -->
-									<?php 
-
-										// vérification des datas dans le répéteur
-										if (have_rows('reseaux_sociaux')):
-
-										// on boucle tant qu'il y a des éléments
-										while (have_rows('reseaux_sociaux')) : the_row();
-									?>
-										<li>
-											<a target="_blank" class="" href="<?php the_sub_field('adresse_du_reseau_social') ?>"><?php the_sub_field('icone')?>
-											</a>
-										</li>
-									<?php 
-
-										// ferme la boucle et la condition
-										endwhile; else: endif; 
-
-										// ferme la connexion de la BDD
-										wp_reset_query(); 
-									?>
+									<li><a target="_blank" href="https://fr.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
+									<li><a target="_blank" href="https://www.facebook.com/?locale=fr_FR%2F"><i class="fa-brands fa-facebook-f"></i></a></li>
+									<li><a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+									<li><a target="_blank" href="https://x.com/?lang=fr"><i class="fa-brands fa-x-twitter"></i></a></li>
+									<li><a target="_blank" href="https://fr.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
 								</ul>
 							</div>
 						</div>

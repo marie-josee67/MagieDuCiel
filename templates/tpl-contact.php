@@ -71,21 +71,16 @@
 								<!-- <h5 class="coming-social-titile mb-30">Réseaux sociaux</h5> -->
 								<h5 class="coming-social-titile mb-30"><?php the_field('titre_reseaux_sociaux'); ?></h5>
 								<ul class="social-list">
-									<?php if (get_field('pinterest_url')) { ?>
-										<li><a target="_blank" class="" href="<?php the_field('pinterest_url'); ?>"><?php the_field('pinterest_icone'); ?></a></li>
-									<?php } ?>
-									<?php if (get_field('facebook_url')) { ?>
-										<li><a target="_blank" class="" href="<?php the_field('facebook_url'); ?>"><?php the_field('facebook_icone'); ?></a></li>
-									<?php } ?>
-									<?php if (get_field('twitter_url')) { ?>
-										<li><a target="_blank" class="" href="<?php the_field('twitter_url'); ?>"><?php the_field('twitter_icone'); ?></a></li>
-									<?php } ?>
-									<?php if (get_field('instagram_url')) { ?>
-										<li><a target="_blank" class="" href="<?php the_field('instagram_url'); ?>"><?php the_field('instagram_icone'); ?></a></li>
-									<?php } ?>
-									<?php if (get_field('linkedin_url')) { ?>
-										<li><a target="_blank" class="" href="<?php the_field('linkedin_url'); ?>"><?php the_field('linkedin_icone'); ?></a></li>
-									<?php } ?>
+
+									<!-- boucle de répéteur pour les réseaux sociaux -->
+									<?php 
+										if (have_rows('reseaux_sociaux'));
+										while (have_rows('reseaux_sociaux')) : the_row();
+									?>
+										<li><a target="_blank" class="" href="<?php the_sub_field('adresse_du_reseau_social'); ?>"><?php the_sub_field('icone'); ?></a></li>
+									<?php 
+										endwhile, else, endif;
+									?>
 								</ul>
 							</div>
 						</div>

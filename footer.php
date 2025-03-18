@@ -10,69 +10,30 @@
 							<h4 class="footer-widget-title">Réseaux sociaux</h4>
 							<div class="footer-widget-content">
 								<ul class="footer-widget-social">
-									<?php if (get_field('pinterest_url')) { ?>
-										<li><a target="_blank" href="<?php the_field('pinterest_url'); ?>">
-											<?php 
-												$pinterest_icone = get_field('pinterest_icone');
-												if ($pinterest_icone) {
-													echo $pinterest_icone; // Affiche l'icône 
-												} else {
-													echo '<i class="fab fa-pinterest"></i>'; // Icône par défaut 
-												}
-											?>
-										</a></li>
-									<?php } ?>
-									
-									<?php if (get_field('facebook_url')) { ?>
-										<li><a target="_blank" href="<?php the_field('facebook_url'); ?>">
-											<?php 
-												$facebook_icone = get_field('facebook_icone');
-												if ($facebook_icone) {
-													echo $facebook_icone; 
-												} else {
-													echo '<i class="fab fa-facebook-f"></i>'; 
-												}
-											?>
-										</a></li>
-									<?php } ?>
-									
-									<?php if (get_field('twitter_url')) { ?>
-										<li><a target="_blank" href="<?php the_field('twitter_url'); ?>">
-											<?php 
-												$twitter_icone = get_field('twitter_icone');
-												if ($twitter_icone) {
-													echo $twitter_icone; 
-													echo '<i class="fab fa-twitter"></i>'; 
-												}
-											?>
-										</a></li>
-									<?php } ?>
-									
-									<?php if (get_field('instagram_url')) { ?>
-										<li><a target="_blank" href="<?php the_field('instagram_url'); ?>">
-											<?php 
-												$instagram_icone = get_field('instagram_icone');
-												if ($instagram_icone) {
-													echo $instagram_icone; 
-												} else {
-													echo '<i class="fab fa-instagram"></i>'; 
-												}
-											?>
-										</a></li>
-									<?php } ?>
-									
-									<?php if (get_field('linkedin_url')) { ?>
-										<li><a target="_blank" href="<?php the_field('linkedin_url'); ?>">
-											<?php 
-												$linkedin_icone = get_field('linkedin_icone');
-												if ($linkedin_icone) {
-													echo $linkedin_icone; 
-												} else {
-													echo '<i class="fab fa-linkedin-in"></i>'; 
-												}
-											?>
-										</a></li>
-									<?php } ?>
+
+									<!-- <?php var_dump (get_field('reseaux_sociaux')); ?> -->
+
+									<!-- boucle de répéteur pour les réseaux sociaux -->
+									<?php 
+
+										// vérification des datas dans le répéteur
+										if (have_rows('reseaux_sociaux')):
+
+										// on boucle tant qu'il y a des éléments
+										while (have_rows('reseaux_sociaux')) : the_row();
+									?>
+										<li>
+											<a href="<?php the_sub_field('adresse_du_reseau_social') ?>"><?php the_sub_field('icone')?>
+											</a>
+										</li>
+									<?php 
+
+										// ferme la boucle et la condition
+										endwhile; else: endif; 
+
+										// ferme la connexion de la BDD
+										wp_reset_query(); 
+									?>
 								</ul>
 							</div>
 						</div>

@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="navigation-area">
 				<div class="logo">
-					<a href="#" class="navbar-brand">
+					<a href="index.php" class="navbar-brand">
 						<img class="logo-dark" src="/assets/img/logo/logo_dark.png" alt="Abias logo">
 					</a>
 				</div>

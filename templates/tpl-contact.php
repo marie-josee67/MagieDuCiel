@@ -74,12 +74,21 @@
 
 									<!-- boucle de répéteur pour les réseaux sociaux -->
 									<?php 
+
+										// vérification des datas dans le répéteur
 										if (have_rows('reseaux_sociaux'));
+
+										// on boucle tant qu'il y a des éléments
 										while (have_rows('reseaux_sociaux')) : the_row();
 									?>
 										<li><a target="_blank" class="" href="<?php the_sub_field('adresse_du_reseau_social'); ?>"><?php the_sub_field('icone'); ?></a></li>
 									<?php 
-										endwhile, else, endif;
+
+										// ferme la boucle et la condition
+										endwhile, else, endif; 
+
+										// ferme la connexion de la BDD
+										wp_reset_query(); 
 									?>
 								</ul>
 							</div>

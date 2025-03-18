@@ -1,1 +1,13 @@
 mettre le fichier: animated-headline.css après le fichier bootstrap.min.css le design se modifie.
+
+liens réseaux sociaux:
+
+https://fr.pinterest.com/
+
+https://www.facebook.com/?locale=fr_FR%2F
+
+https://www.instagram.com/
+
+https://x.com/?lang=fr
+
+https://fr.linkedin.com/

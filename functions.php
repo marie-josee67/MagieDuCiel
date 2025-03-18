@@ -44,6 +44,8 @@
         wp_enqueue_style( 'css-flaticon', get_template_directory_uri().'/assets/css/flaticon.css',  array(), null);
         wp_enqueue_style( 'css-icofont', get_template_directory_uri().'/assets/css/icofont.min.css',  array(), null );
         wp_enqueue_style( 'css-style', get_template_directory_uri().'/assets/css/style.css',  array(), null);
+        wp_enqueue_style( 'css-custom', get_template_directory_uri().'/assets/css/custom.css',  array(), null);
+
     }
 
     add_action('wp_enqueue_scripts','ciel_styles');

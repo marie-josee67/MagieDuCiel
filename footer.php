@@ -23,7 +23,7 @@
 										while (have_rows('reseaux_sociaux')) : the_row();
 									?>
 										<li>
-											<a href="<?php the_sub_field('adresse_du_reseau_social') ?>"><?php the_sub_field('icone')?>
+											<a target="_blank" class="" href="<?php the_sub_field('adresse_du_reseau_social') ?>"><?php the_sub_field('icone')?>
 											</a>
 										</li>
 									<?php 

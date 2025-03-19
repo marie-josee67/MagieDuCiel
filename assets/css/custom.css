@@ -1,5 +1,10 @@
 /* fiche de style personnel */
 
-body{
-    color: aliceblue;
+/* logo du header */
+.logo-dark{
+    width: 100px;
+    height: 80px;
+    border-radius: 50% 20% / 10% 40%;
+    box-shadow: 0 4px 8px #261b78; /* Ombre autour du logo */
+    /* border: 2px solid red; */
 }

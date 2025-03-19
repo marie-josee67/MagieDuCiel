@@ -20,7 +20,7 @@
 			<div class="navigation-area">
 				<div class="logo">
 					<a href="index.php" class="navbar-brand">
-						<img class="logo-dark" src="/assets/img/Photos/logo/logo_3.jpg" alt="Logo Magie du Ciel">
+						<img class="logo-dark" src="<?php echo get_template_directory_uri(); ?>/assets/img/Photos/logo/logo_3.jpg" alt="Logo Magie du Ciel">
 					</a>
 				</div>
 				<!-- mise en place du menu -->

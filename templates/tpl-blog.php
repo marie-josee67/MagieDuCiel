@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="blog-page-wrapper">
 				<!-- Blog post area -->
-				<div class="row blog-posts justify-content-center">
+				<div class="row blog-posts justify-content-center" >
 					<!-- Blog Single-->
 					<div class="col-lg-4 col-md-6">
 
@@ -52,7 +52,7 @@
 								while($the_query->have_posts()) {$the_query->the_post();
 						?>
 
-						<div class="blog-item mb-30">
+						<div id ="card" class="blog-item mb-30">
 							<a href="<?php the_permalink(); ?>" class="blog-thumb">
 								<img src="<?php the_post_thumbnail_url(); ?>" alt="blog image">
 							</a>
@@ -86,7 +86,7 @@
 					<!-- / Blog post area end -->
 
 					<!-- Blog Widget Area Start -->
-					<div class="col-lg-4">
+					<div class="col-lg-4 ">
 						<div class="blog-widgets-area">
 							<!-- Single Widget -->
 							<div class="blog-widget-item mb-30">

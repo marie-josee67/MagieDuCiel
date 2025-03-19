@@ -15,3 +15,9 @@
     color: aliceblue;
     /* border:2px solid red; */
 }
+
+#card{
+    max-width: 377px;
+    max-height: 691px;
+    /* border:2px solid red; */
+}

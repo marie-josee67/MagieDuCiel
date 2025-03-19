@@ -63,6 +63,31 @@
 							</div>
 							<!-- <p class="about-text">Passionner du ciel, si vous êtes au courant d'une informations qui n'est pas encore resencer dit le nous!</p> -->
 							<p class="about-text"><?php the_field('texte');?></p>
+							<div class="social-links">
+								<ul>
+									<!-- boucle de répéteur pour les réseaux sociaux -->
+									<?php 
+
+										// vérification des datas dans le répéteur
+										if (have_rows('sociaux')):
+
+										// on boucle tant qu'il y a des éléments
+										while (have_rows('sociaux')) : the_row();
+									?>
+										<li>
+											<a target="_blank" class="" href="<?php the_sub_field('adresse_du_reseau_social') ?>"><?php the_sub_field('icone')?>
+											</a>
+										</li>
+									<?php 
+
+										// ferme la boucle et la condition
+										endwhile; else: endif; 
+
+										// ferme la connexion de la BDD
+										wp_reset_query(); 
+									?>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -71,8 +96,8 @@
 		<!--=========|  Statistique |=========-->
 		<div class="stats stats-about" id="counters_one">
 			<div class="container">
-				<div class="stats-wrapper" data-background="/assets/img/bg/stats_bg.png">
-					<div class="row">
+				<div class="stats-wrapper" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/bg/stats_bg.png">
+					<div  id="satPorpo" class="row">
 						<div class="col-3">
 							<div class="stats-item">
 								<div class="stats-icon">
@@ -127,7 +152,7 @@
 	<!--=========| / About Section |=========-->
 
 	<!--=========|  Service Section |=========-->
-	<section class="service pt-160 pb-100" id="service">
+	<section class="service pt-160 pb-100 " id="service">
 		<div class="container">
 			<div class="service-wrapper">
 				<div class="section-heading">

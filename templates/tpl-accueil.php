@@ -239,8 +239,13 @@
 						<p class="heading-text"><?php the_field('texte_message'); ?></p>
 					</div>
 				</div>
-				
 			</div>
+		</div>
+		<div class="skill-dots skill-dots-left">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/skill_dots_left.png" alt="">
+		</div>
+		<div class="skill-dots skill-dots-right">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/skill_dots_left.png" alt="">
 		</div>
 	</section>
 	<!--=========| / Skill Section |=========-->

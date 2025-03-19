@@ -25,6 +25,14 @@
     border:2px solid red;
 }
 
+/*  ************************** A propos ************************* */
+
+#satPorpo{
+    color: aliceblue;
+    /* border:2px solid purple; */
+}
+
+
 /* ***************************** blog ******************************** */
 #card{
     max-width: 377px;

@@ -1,5 +1,5 @@
 <!--=========|  Footer Section |=========-->
-<footer class="footer footer-shape footer-shape-home1" id="footer">
+<footer class="footer footer-shape footer-shape-home1" id="footer" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/bg/stats_bg.png">
 	<div class="footer-wrapper">
 		<div class="container">
 			<div class="footer-widget-area pb-100">

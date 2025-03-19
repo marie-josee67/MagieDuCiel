@@ -85,7 +85,7 @@
 	<!--=========| / About Section |=========-->
 
 	<!--=========|  Experience Section |=========-->
-	<section class="experience pt-60 pb-100" id="experience" data-background="/assets/img/bg/dark_experience_bg.jpgg" data-overlay="9">
+	<section class="experience pt-60 pb-100" id="experience" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/bg/dark_experience_bg.jpgg" data-overlay="9">
 		<div class="container">
 			<div class="experience-wrapper">
 				<div class="section-heading section-heading-white">

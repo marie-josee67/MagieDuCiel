@@ -127,3 +127,27 @@ function filter_articles_by_category($query) {
     }
 }
 add_action('pre_get_posts', 'filter_articles_by_category');
+
+/* permet de récupérer l'image des point bleue dans la page d'accueil section a propos */
+function mon_theme_enqueue_styles() {
+    wp_enqueue_style('mon-style', get_template_directory_uri() . '/style.css');
+
+    // Injecter du CSS personnalisé avec la bonne URL d'image
+    $image_url = get_template_directory_uri() . '/assets/img/shapes/dots_rectengular.png';
+    $custom_css = "
+        .about-img-dark:after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-image: url('{$image_url}');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 100px;
+            left: -156px;
+            z-index: -1;
+        }
+    ";
+    wp_add_inline_style('mon-style', $custom_css);
+}
+add_action('wp_enqueue_scripts', 'mon_theme_enqueue_styles');

@@ -129,7 +129,7 @@ function filter_articles_by_category($query) {
 add_action('pre_get_posts', 'filter_articles_by_category');
 
 /* permet de récupérer l'image des point bleue dans la page d'accueil section a propos */
-function mon_theme_enqueue_styles() {
+function a_propos_image_points() {
     wp_enqueue_style('mon-style', get_template_directory_uri() . '/style.css');
 
     // Injecter du CSS personnalisé avec la bonne URL d'image
@@ -150,4 +150,11 @@ function mon_theme_enqueue_styles() {
     ";
     wp_add_inline_style('mon-style', $custom_css);
 }
-add_action('wp_enqueue_scripts', 'mon_theme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'a_propos_image_points');
+
+
+function styles_des_categories() {
+    wp_enqueue_style('tpl-blog-style', get_template_directory_uri() . '/path-to-your-css/tpl-blog.css');
+}
+add_action('wp_enqueue_scripts', 'styles_des_categories');
+

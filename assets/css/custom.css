@@ -15,9 +15,24 @@
     color: aliceblue;
     /* border:2px solid red; */
 }
+
+/* section mes articles titre des cards*/
+#titreCard{
+    white-space: normal; /* Permet au texte de passer à la ligne */
+    overflow-wrap: break-word; /* Permet de couper les mots si nécessaire */
+    font-size: 20px; /* Taille de police exemple, modifiez selon vos besoins */
+     
+    border:2px solid red;
+}
+
 /* ***************************** blog ******************************** */
 #card{
     max-width: 377px;
     max-height: 691px;
     /* border:2px solid red; */
+}
+
+#paraSkill{
+    color: aliceblue;
+    /* border:2px solid red;  */
 }

@@ -179,22 +179,22 @@
 					<h3 class="section-subtitle"><?php the_field('sous-titre_service'); ?></h3>
 				</div>
 				<div class="service-area mt-80">
-					<div class="row">
+					<div class="row" >
 						<!-- Service Single -->
-						<div class="col-lg-4 col-sm-6">
-						<?php 
-							// création d'une varaible pour stocker les données de la BDD
-							$the_query = new WP_Query(array(
-								'posts_per_page' => 6, // seulement 6 articles
-								'post_type' =>'article',
-								'orderby' => 'rand',
-							));
-								// On teste si des données sont retournées par la requêtes SQL
-								if ($the_query->have_posts() ) {
-								// s'il y a des données, on boucle dessus
-								while($the_query->have_posts()) {$the_query->the_post();
-						?>
-							<div class="service-item-dark">
+						<div  class="col-12">						
+							<?php 
+								// création d'une varaible pour stocker les données de la BDD
+								$the_query = new WP_Query(array(
+									'posts_per_page' => 6, // seulement 6 articles
+									'post_type' =>'article',
+									'orderby' => 'rand',
+								));
+									// On teste si des données sont retournées par la requêtes SQL
+									if ($the_query->have_posts() ) {
+									// s'il y a des données, on boucle dessus
+									while($the_query->have_posts()) {$the_query->the_post();
+							?>
+							<div  class="service-item-dark">
 								<div class="service-icon-dark">
 									<i class="fas fa-laptop-code"></i>
 								</div>
@@ -202,21 +202,22 @@
 								<?php  the_excerpt()?>
 								<a href="<?php the_permalink(); ?>" class="blog-btn gr-transition"><?php the_field('texte_bouton'); ?></a>
 							</div>
+
+							<?php 
+								// fermeture du while
+								} 
+								wp_reset_postdata();
+								// fermeture du if
+								}
+								// si la boucle ne retourne rien afficher se texte 
+								else { 
+							?>
+							<!-- Il n'y a aucune actualité pour le moment -->
+							<?php the_field('texte_de_secour'); ?>
+							<?php 
+								} 
+							?>
 						</div>
-						<?php 
-							// fermeture du while
-							} 
-							wp_reset_postdata();
-							// fermeture du if
-							}
-							// si la boucle ne retourne rien afficher se texte 
-							else { 
-						?>
-						<!-- Il n'y a aucune actualité pour le moment -->
-						<?php the_field('texte_de_secour'); ?>
-						<?php 
-							} 
-						?>
 					</div>
 				</div>
 			</div>
@@ -234,16 +235,12 @@
 					<p class="heading-text">Un grain de sable dans l'immensité du temps et de l'espace. Nous ne sommes qu'une ombre face à l'infini !</p> -->
 					<h2 class="section-title"><?php the_field('titre_message'); ?></h2>
 					<h3 class="section-subtitle"><?php the_field('sous-titre_message'); ?></h3>
-					<p class="heading-text"><?php the_field('texte_message'); ?></p>
+					<div id="paraSkill">
+						<p class="heading-text"><?php the_field('texte_message'); ?></p>
+					</div>
 				</div>
 				
 			</div>
-		</div>
-		<div class="skill-dots skill-dots-left">
-			<img src="<?php the_field('image_1'); ?>" alt="">
-		</div>
-		<div class="skill-dots skill-dots-right">
-			<img src="<?php the_field('image_2'); ?>" alt="">
 		</div>
 	</section>
 	<!--=========| / Skill Section |=========-->

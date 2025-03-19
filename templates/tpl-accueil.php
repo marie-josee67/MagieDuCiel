@@ -59,7 +59,7 @@
 							<img src="<?php the_field('image'); ?>" alt="About img">
 						</div>
 					</div>
-					<div>
+					<div class="col-lg-6 col-md-5>
 						<div class="about-content about-content-dark">
 							<!-- <div class="section-heading section-heading-white section-heading-dark-about">
 								<h2 class="section-title">A Propos</h2>

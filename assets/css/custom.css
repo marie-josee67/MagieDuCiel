@@ -1,5 +1,5 @@
 /* fiche de style personnel */
-
+/* *********************************** header ************************************** */
 /* logo du header */
 .logo-dark{
     width: 100px;
@@ -7,4 +7,11 @@
     border-radius: 50% 20% / 10% 40%;
     box-shadow: 0 4px 8px #261b78; /* Ombre autour du logo */
     /* border: 2px solid red; */
+}
+
+/* ********************************** Accueil ************************************** */
+/* texte de la section a propos */
+#paraPropos{
+    color: aliceblue;
+    /* border:2px solid red; */
 }

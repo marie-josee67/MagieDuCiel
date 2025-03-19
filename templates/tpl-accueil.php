@@ -59,7 +59,7 @@
 							<img src="<?php the_field('image'); ?>" alt="About img">
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-5>
+					<div class="col-lg-6 col-md-5">
 						<div class="about-content about-content-dark">
 							<!-- <div class="section-heading section-heading-white section-heading-dark-about">
 								<h2 class="section-title">A Propos</h2>
@@ -70,8 +70,9 @@
 								<h2 class="section-title"><?php the_field('titre_a_propos'); ?></h2>
 								<h3 class="section-subtitle"><?php the_field('sous-titre_a_propos'); ?></h3>
 							</div>
-							<p class="about-text"><?php the_field('texte'); ?></p>
-
+							<div id="paraPropos">
+								<p class="about-text"><?php the_field('texte'); ?></p>
+							</div>
 							<div class="about-btn mt-30">
 								<!-- rajout du lien de la page avec son ID -->
 								<a href="<?php echo get_permalink(14); ?>" class="dark-btn"><?php the_field('bouton_a_propos'); ?><span></span></a>

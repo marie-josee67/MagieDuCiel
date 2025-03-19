@@ -153,8 +153,3 @@ function a_propos_image_points() {
 add_action('wp_enqueue_scripts', 'a_propos_image_points');
 
 
-function styles_des_categories() {
-    wp_enqueue_style('tpl-blog-style', get_template_directory_uri() . '/path-to-your-css/tpl-blog.css');
-}
-add_action('wp_enqueue_scripts', 'styles_des_categories');
-

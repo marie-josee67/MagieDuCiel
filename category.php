@@ -3,7 +3,7 @@
 <main class="category-articles">
     <h1><?php single_cat_title(); ?></h1>
     <?php 
-    // Inclure un template du'n autre page ici blog.php
+    // Inclure un template d'une autre page ici blog.php
     get_template_part('template-parts/tpl-blog.php'); 
 
     if (have_posts()) : ?>
